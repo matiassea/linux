@@ -141,6 +141,10 @@ Atacando al 810 =>7C:DB:98:E2:95:FC CH1
 Atacando a la vecina => 18:70:3B:E6:FF:53 CH7
 airodump-ng wlan0 => para rescatar BSSID y chanel
 
+# Instalar screenfetch
+sudo apt-get install screenfetch
+screenfetch
+
 # Instalar Python
 https://www.python.org/downloads/source/
 Donwload Linux, Gzipped.
