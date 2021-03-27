@@ -1,6 +1,12 @@
 # linux
 Comandos generales de Linux
 
+Actualizacion del sistema operativo
+sudo apt-get update && sudo apt-get upgrade
+
+# Instalacion de git
+sudo apt-get install git
+
 Para el comando NANO
 ctrl + O => para poder guardar
 
