@@ -185,15 +185,15 @@ sudo apt install
 
 # Para saber la arquitectura de un Linux
 uname –m\
-x86_64 = > es el correcto, 64 bits
-If the response is i686, you have a 32-bit version of Linux.
-If the response is x86_64, you have a 64-bit version of Linux.
+x86_64 = > es el correcto, 64 bits\
+If the response is i686, you have a 32-bit version of Linux.\
+If the response is x86_64, you have a 64-bit version of Linux.\
 uname –a\
-You can find out more detail about your particular installation of Linux, like your kernel version, by entering
-Se debe instalar Kali Linux para 64 bits
+You can find out more detail about your particular installation of Linux, like your kernel version, by entering\
+Se debe instalar Kali Linux para 64 bits\
 
-Linux kali 5.9.0-kali1-686-pae #1 SMP Debian 5.9.1-1kali2 (2020-10-29) i686 GNU/Linux
-i686
+Linux kali 5.9.0-kali1-686-pae #1 SMP Debian 5.9.1-1kali2 (2020-10-29) i686 GNU/Linux\
+i686\
 
 
 # SQLMAP
@@ -204,13 +204,13 @@ http://achap.cl/festival_2017/ganadores_categoria.php?id=4
 
 
 
-# Uso de Nano Bash
+## Uso de Nano Bash\
 
-Para comenzar un archivo @nano XXXX.sh
-Para ejecturar el archivo @bash XXXX.sh
-Para editar un archivo se ocupa el editor de texto nano
-Para guardar el archivo se aprieta Ctrl + X, despues Yes
-Para declarar una variable en un string puede ser con read o anteponiendo el signo $
+Para comenzar un archivo @nano XXXX.sh\
+Para ejecturar el archivo @bash XXXX.sh\
+Para editar un archivo se ocupa el editor de texto nano\
+Para guardar el archivo se aprieta Ctrl + X, despues Yes\
+Para declarar una variable en un string puede ser con read o anteponiendo el signo $\
 
 
 
