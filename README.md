@@ -204,13 +204,13 @@ http://achap.cl/festival_2017/ganadores_categoria.php?id=4
 
 
 
-## Uso de Nano Bash\
+## Uso de Nano Bash
 
 Para comenzar un archivo @nano XXXX.sh\
 Para ejecturar el archivo @bash XXXX.sh\
 Para editar un archivo se ocupa el editor de texto nano\
 Para guardar el archivo se aprieta Ctrl + X, despues Yes\
-Para declarar una variable en un string puede ser con read o anteponiendo el signo $\
+Para declarar una variable en un string puede ser con read o anteponiendo el signo $
 
 
 
