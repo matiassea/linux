@@ -184,11 +184,11 @@ sudo apt install
 
 
 # Para saber la arquitectura de un Linux
-uname –m
+uname –m\
 x86_64 = > es el correcto, 64 bits
 If the response is i686, you have a 32-bit version of Linux.
 If the response is x86_64, you have a 64-bit version of Linux.
-uname –a
+uname –a\
 You can find out more detail about your particular installation of Linux, like your kernel version, by entering
 Se debe instalar Kali Linux para 64 bits
 
