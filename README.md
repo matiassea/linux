@@ -244,4 +244,100 @@ use exploit/multi/handler
 set LHOST 192.168.1.91
 
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+1)	“django-admin.py startproject src”. Para comenzar haciendo la carpeta de configuración
+2)	Para el proyecto se debe crear base de datos, q por omision en django funciona con SQL.
+3)	Para crear base de datos. “python manage.py migrate”
+4)	Django tiene un servidor de prueba, para turn on se debe escribir “python manage.py runserver”
+5)	Una vez iniciado el servidor, da el ip y puerto.
+6)	Crear primera vista y confgurar el URL
+7)	Se arregla el 
+8)	Peticion => Request, crea objeto HTTP Request, asociado a la función vista
+9)	Respuesta => HTTPResponse
+10)	url.py genera listado de URL a ser vistas, se genera dentro de la tupla. Aquí se generan las rutas
+
+
+Celery
+django-admin.py startproject django_email_celery  Para crear el projecto
+python manage.py startapp example  Para crear carpeta example
+python manage.py runserver [en la misma carpeta manager]
+
+El puesto 19960 esta ocupado, por lo que se cambiara de puerto
+Para esto se ocupo netstat -a -n -o |find “54”
+Y se confirmo con Putty, opción Telnet, localhost, puerto 19960
+ 
+
+Para corrrer Celery en cmd de la carpeta
+celery -A django_email_celery worker -l info
+ 
+Test Cornershop
+Para instalar todas las librerias segur requirements.txt
+pip install -r requirements.txt
+https://note.nkmk.me/en/python-pip-install-requirements/
+python manage.py runserver 0.0.0.0:8000
+
+Para ver en detalle una librería
+pip show isort
+Se rebaja version de isort
+isort==4.3.21
+
+
+python manage.py runserver 0.0.0.0:8000
+
+Instalo Docker Toolbox, debido a que es para Windows menor a V10.
+
+Instalacion de Docker en Linux
+Sudo apt install Docker.io
+Docker images => muestas las imágenes que estan instaladas
+Docker pull ubuntu => baja la imagen llamada ubuntu
+Docker ps => muestra los contenedores (proceso) que se ejecuta
+Docker ps -a => muestra los contenedores detenidos
+Docker ps -a1 => muestra los ID contenedores detenidos
+
+Docker run ubuntu => corre la imagen ubuntu
+Docker run ubuntu -it bash => Correr imagen ubuntu, de forma interactive (-it), con el programa bash
+Desde una imagen se puede ejecutar multiples contenedores (procesos) desde solo una imagen
+Docker rm ID=> para eliminar el proceso
+
+ls -h -l -R. Vista de archivos recursivas, vista humana y que muestre los permisos
+
+Crear grupo y usuario
+Sudo useradd cornershop
+Sudo groupadd cornershop
+
+
+Docker en Linux
+Todos los comandos de Docker se corren con SUDO
+
+Se debe instalar Docker desde la consola
+Pagina especial para instalar Docker desde la consola
+Para Kali Linux es una instalación especial que esta en linuxhint.com/install_docker_kali_linux
+Si todo sale bien debe probarse por medio de Docker verion o sudo Docker run hello-world
+Despues se debe a ver el “Post—installation steps for Linux” para instalar sacar el sudo de los comandos dockers
+ 
+Memoria Swap
+Aumento de la memoria 
+Swappiness puede tener un valor entre 0 y 100, pero por defecto se utiliza 60. Hay que aclarar que este valor puede no ser igualmente eficaz en todos los casos, ya que dependerá del uso individual, las especificaciones del hardware o las necesidades del usuario. 
+Cuanto mayor sea el valor del parámetro swappiness, más agresivamente el kernel utilizará swap. Por ello, se recomienda utilizar un valor bajo que reduzca el intercambio desde RAM y mejore la capacidad de respuesta del sistema (rendimiento global, funcionalidad y velocidad del sistema operativo).
+
+Command Make
+make -f Makefile
+make (apretar tab)
+Faltaba docker compose
+Docker-compose --version
+https://docs.docker.com/compose/install/
+
+
+
+
