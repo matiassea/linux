@@ -1,4 +1,4 @@
-# linux
+# Linux
 Comandos generales de Linux
 
 Actualizacion del sistema operativo
@@ -7,7 +7,7 @@ sudo apt-get update && sudo apt-get upgrade
 # Instalacion de git
 sudo apt-get install git
 
-Para el comando NANO
+# Uso de NANO BASH
 ctrl + O => para poder guardar
 
 ctrl + s => guardar informacion
@@ -19,29 +19,27 @@ ctrl + x => para salir
 alt + a y flechas para marcar texto, desmarcar alt + a
 
 copiar crtl + shift + c 
+
 pegar crtl + shift + v
 
 
-Htop
+# Htop
 
 # Para control de datos de la red
+
 aptitude search nethogs
 sudo apt install nethogs
 nethogs
 
 
-Discos en Linux
+# Discos en Linux
 
 sda
 sdb
 sd0 o sr0
 
 
-
-sensible-browser
-
-
-
+# Airmon
 
 sudo airmon-ng
 
@@ -50,6 +48,8 @@ airmon-ng start wlan0
 airodump-ng wlan0
 
 airodump-ng --bssid 1C:B0:44:BF:33:45 --channel 11 wlan0
+
+# Nmap
 
 
 ifconfig
@@ -78,13 +78,12 @@ se busca si tiene algun backdoor con metaexploit
 
 nmap --script vuln IP
 
-
 ip iphone 192.168.1.83
 
-
-
-
 min 10:00 Nmap tutorial to find networks vulnerabilities
+
+
+# Comandos generales
 
 man ls => Ayuda del comando
 ls -l -a
@@ -98,7 +97,7 @@ ls --file-type -a -l
 Para abir archivos
 cat,less XXXXX.XXX
 
-Para seleccionar la impresion d euna linea segun string d euna linea se ocupa grep, ej: ifconfig | grep broadcast
+Para seleccionar la impresion de una linea segun string d euna linea se ocupa grep, ej: ifconfig | grep broadcast
 Para seleccionar una posicion de esa linea se utiliza awk {print$2}
 Para crear alias ipaddress="ifconfig | grep broadcast | awk '{print $2}'"
 alias ipaddress="echo $(ifconfig | grep broadcast | awk '{print $2}')"
@@ -245,3 +244,4 @@ use exploit/multi/handler
 set LHOST 192.168.1.91
 
 
+    
