@@ -86,30 +86,49 @@ min 10:00 Nmap tutorial to find networks vulnerabilities
 # Comandos generales
 
 man ls => Ayuda del comando
+
 ls -l -a
+
 pwd
+
 cd /
+
 uname -i
+
 cd
+
 ls --file-type
+
 ls --file-type -a -l
+
 ls -a -l -R => busqueda recursiva y con informacion completa
+
+ls -h -l -R. Vista de archivos recursivas, vista humana y que muestre los permisos
+
 cat,less XXXXX.XXX => Para abir archivos
+
 rm -d dirname => To remove one or more empty directories use the -d option
+
 sudo rm -rvi app/ => If you want rm to ask you to confirm before deleting every directories and files
 
-
 Para seleccionar la impresion de una linea segun string d euna linea se ocupa grep, ej: ifconfig | grep broadcast
+
 Para seleccionar una posicion de esa linea se utiliza awk {print$2}
+
 Para crear alias ipaddress="ifconfig | grep broadcast | awk '{print $2}'"
+
 alias ipaddress="echo $(ifconfig | grep broadcast | awk '{print $2}')"
 
 # Control de procesos
+
 ps aux | more
+
 ps aux
-En vivo = top
-Instalando TOP
+
+## Instalando TOP
+
 sudo apt-get install htop
+
 ejecutar htop
 
 
@@ -278,7 +297,8 @@ set LHOST 192.168.1.91
 10)	url.py genera listado de URL a ser vistas, se genera dentro de la tupla. Aquí se generan las rutas
 
 
-Celery
+# Celery
+
 django-admin.py startproject django_email_celery  Para crear el projecto
 python manage.py startapp example  Para crear carpeta example
 python manage.py runserver [en la misma carpeta manager]
@@ -291,63 +311,112 @@ Y se confirmo con Putty, opción Telnet, localhost, puerto 19960
 Para corrrer Celery en cmd de la carpeta
 celery -A django_email_celery worker -l info
  
-Test Cornershop
+# Test Cornershop
+
 Para instalar todas las librerias segur requirements.txt
+
 pip install -r requirements.txt
+
 https://note.nkmk.me/en/python-pip-install-requirements/
+
 python manage.py runserver 0.0.0.0:8000
 
 Para ver en detalle una librería
+
 pip show isort
+
 Se rebaja version de isort
+
 isort==4.3.21
 
+Crear grupo y usuario (este paso no es necesario)
+
+Sudo useradd cornershop
+
+Sudo groupadd cornershop
+
+Docker PS 
+Docker exec -it (ID container) bash (joins already container is bash prompt)
+pwd /opt/cornershop debe estar en /opt/cornershop/backend_test
+celery -A backend_test worker -i info
+
+
+
+
+# Historial
 
 python manage.py runserver 0.0.0.0:8000
 
 Instalo Docker Toolbox, debido a que es para Windows menor a V10.
 
-Instalacion de Docker en Linux
+# Instalacion de Docker en Linux
+
 Sudo apt install Docker.io
+
 Docker images => muestas las imágenes que estan instaladas
+
 Docker pull ubuntu => baja la imagen llamada ubuntu
-Docker ps => muestra los contenedores (proceso) que se ejecuta
+
+Docker ps => muestra los contenedores (proceso) que se ejecuta, lista de containers
+
 Docker ps -a => muestra los contenedores detenidos
+
 Docker ps -a1 => muestra los ID contenedores detenidos
 
+Docker exec -it (ID container)
+
 Docker run ubuntu => corre la imagen ubuntu
+
 Docker run ubuntu -it bash => Correr imagen ubuntu, de forma interactive (-it), con el programa bash
+
 Desde una imagen se puede ejecutar multiples contenedores (procesos) desde solo una imagen
+
 Docker rm ID=> para eliminar el proceso
 
-ls -h -l -R. Vista de archivos recursivas, vista humana y que muestre los permisos
 
-Crear grupo y usuario
-Sudo useradd cornershop
-Sudo groupadd cornershop
+# Docker en Linux
 
-
-Docker en Linux
 Todos los comandos de Docker se corren con SUDO
 
 Se debe instalar Docker desde la consola
+
 Pagina especial para instalar Docker desde la consola
+
 Para Kali Linux es una instalación especial que esta en linuxhint.com/install_docker_kali_linux
+
 Si todo sale bien debe probarse por medio de Docker verion o sudo Docker run hello-world
+
 Despues se debe a ver el “Post—installation steps for Linux” para instalar sacar el sudo de los comandos dockers
  
-Memoria Swap
+# Memoria Swap
+
 Aumento de la memoria 
+
 Swappiness puede tener un valor entre 0 y 100, pero por defecto se utiliza 60. Hay que aclarar que este valor puede no ser igualmente eficaz en todos los casos, ya que dependerá del uso individual, las especificaciones del hardware o las necesidades del usuario. 
+
 Cuanto mayor sea el valor del parámetro swappiness, más agresivamente el kernel utilizará swap. Por ello, se recomienda utilizar un valor bajo que reduzca el intercambio desde RAM y mejore la capacidad de respuesta del sistema (rendimiento global, funcionalidad y velocidad del sistema operativo).
 
-Command Make
+# Operacion con archivo Make
+
 make -f Makefile
-make (apretar tab)
-Faltaba docker compose
-Docker-compose --version
+
+make up
+
+Faltaba instalar docker compose, para comprobar Docker-compose --version
+
 https://docs.docker.com/compose/install/
 
+# Operacion con Celery
 
+Python manage.py migrate
 
+Para levantar la app python  manage.py startapp app , este paso se debe confirmar ya que se crea una carpeta llamada app
+
+python manage.py runserver 0.0.0.0:8000
+
+Para navegar se puede utilizar w3m http://127.0.0.1:8000/
+
+celery -A backend_test worker -l info
+
+find /home -iname or -name celery, este comando es para buscar archivos segun el nombre
 
