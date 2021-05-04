@@ -1,0 +1,18 @@
+#  Instalacion de Arch Linux
+
+## Conexion a internet, esta conexion es temporal.
+
+ip addr show 
+iwctl 
+device list
+station wlan0 scan
+station wlan0 connect "Pupilais"
+ping -c 5 8.8.8.8
+
+
+## Particion de discos, para caso de Bios con MBR
+
+Fdisk -l
+Cfdisk
+
+
