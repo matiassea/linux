@@ -15,4 +15,56 @@ ping -c 5 8.8.8.8
 Fdisk -l
 Cfdisk
 
+## Se realiza las 4 particiones o las que correspondan de los discos
+
+SDA2 /
+SDA1 / Boot [1GB, haciendo bootable este disco]
+SDA4 / Home
+SDA3 / Swap [dejando la mitad de la memoria RAM]
+
+
+## Formato de las particiones 
+SDA2 /        => mkfs.ext4 /dev/sda2
+SDA1 / Boot   => mkfs.ext4 /dev/sda1
+SDA4 / Home   => mkfs.ext4 /dev/sda4
+SDA3 / Swap   => mkswap /dev/sda3
+
+## Prender el swap
+swapon /dev/sda3
+
+## Montar or mount
+Mount /dev/sda2 /mnt => Montar el root
+pacstrap /mnt base linux linux-firmware vim nano grub
+mkdir /mnt/etc
+genfstab -U -p /mnt >> /mnt/etc/fstab
+mkdir /mnt/home
+mkdir /mnt/boot
+mount /dev/sda1 /mnt/boot
+mount /dev/sda4 /mnt/home
+
+## Montar or mount
+pacstrap -i /mnt base => Instalacion de la base
+arch-chroot /mnt => entra el root
+pacman -S linux linux-headers linux-lts linux-lts-headers
+"1" apretar "enter" mkinitcpio
+pacman -S nano
+pacman -S base-devel openssh
+systemctl enable sshd
+pacman -S networkmanager wpa_supplicant wireless_tools netctl
+"enter"
+"enter"
+pacman -S dialog
+systemctl enable NetworkManager
+
+## Configuraciones
+nano /etc/locale.gen
+"borrar el # en en_us.utf-8 utf-8"
+locale-gen
+"enter"
+
+## Configuraciones de usuarios
+
+
+
+ 
 
