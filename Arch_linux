@@ -63,8 +63,64 @@ locale-gen
 "enter"
 
 ## Configuraciones de usuarios
+passwd => Password to root
+useradd -m -g users -G wheel <name> => Crear usuario <name>=Ngempin
+passwd <name> => Password de <name>=Ngempin
+
+pacman -S sudo
+which sudo
+editor = nano visudo "enter"
+"borrar" "#" a "% wheel all = (all) all"
 
 
+## Instalar Grub
+pacman -S grub dosfstools os-prober mtools
+grub-install --target=i386-pc --recheck /dev/sda
+ls -l /boot/grub
+mkdir /boot/grub/locale => si es que no existe
+grub-mkconfig -o /boot/grub/grub.cfg
+exit
+umoun -a
+reboot
 
+
+## Configuracion de Timezone
+timedatectl list-timezones
+America/........
+timedatectl set-timezone America/Santiago
+systemctl enable systemd-timesyncd
+
+## Configuracion de hostname 
+cat /etc/hostname
+hostnamectl set-hostname <name>
+cat /etc/hostanme
+nano /etc/hosts
+127.0.0.1 localhost 127.0.1.1 <name>
+reboot
+hostnamectl
+
+##Conectar a internet
+systemctl start NetworkManager.service
+systemctl enable NetworkManager.service
+sudo nmcli dev wifi connect Pupilais password **pupilais83**
+
+## Desktop Enviroment (Gnome)
+pacman -S xorg-server
+pacman -S gnome
+"enter"
+"enter"
+"enter"
+"enter"
+pacman -S gnome-tweaks
+systemctl enable gdm
+reboot
+
+pacman -Syy
+pacman -Syu
+
+#Termite
+sudo pacman -S termite
+pacman -Rns <name>
+pacman -Qe
  
 
