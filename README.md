@@ -131,7 +131,13 @@ sudo apt-get install htop
 
 ejecutar htop
 
+# Comandos para inspeccionar el PC
+LSUSB => USB dispoibles
+LSUSB -v
+LSMOD => /proc/modules
 
+DMESG
+DMIDECODE
 
 # Airmon
 iwconfig => Mode:Managed, esto debe ser cambiado a modo monitor
