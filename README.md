@@ -208,6 +208,13 @@ hackwifi
 Para actualizar el paquete de instalacion
 sudo apt install
 
+# Arch
+pacman -Syu
+https://wiki.archlinux.org/title/System_maintenance#Upgrading_the_system
+
+Use pacman -Qtd to check for packages that were installed as a dependency but now, no other packages depend on them. If an orphaned package is still needed, it is recommended to change the installation reason to explicit. Otherwise, if the package is no longer needed, it can be removed. 
+
+
 
 # Para saber la arquitectura de un Linux
 uname –m\
