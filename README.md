@@ -421,7 +421,20 @@ https://docs.docker.com/compose/install/
 
 # Operacion con Celery
 
-Python manage.py migrate
+find / -name django-admin
+
+/home/ngempin/.local/bin/django-admin 
+
+/home/ngempin/.local/bin/django-admin startproject celery_example
+
+This is likely because you either used the --user option to pip 
+install, or you set up pip in such a way that it automatically does 
+that. Hence, everything gets installed in $HOME/.local. You may want
+to add $HOME/.local/bin to your $PATH for the future.
+
+django-admin startproject celery_example
+
+python manage.py migrate
 
 Para levantar la app python  manage.py startapp app , este paso se debe confirmar ya que se crea una carpeta llamada app
 
