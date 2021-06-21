@@ -421,8 +421,9 @@ https://docs.docker.com/compose/install/
 
 # Operacion con Celery
 
-find / -name django-admin
+find / -name django-admin => para ver donde fue instalado el django-admin
 
+### Ruta con la cual debemos agregar cada corrida
 /home/ngempin/.local/bin/django-admin 
 
 /home/ngempin/.local/bin/django-admin startproject celery_example
@@ -432,17 +433,25 @@ install, or you set up pip in such a way that it automatically does
 that. Hence, everything gets installed in $HOME/.local. You may want
 to add $HOME/.local/bin to your $PATH for the future.
 
+### Para comenzar el proyecto
 django-admin startproject celery_example
 
+### Para crear la carpeta
 python manage.py migrate
 
+### Para crear la app
 Para levantar la app python  manage.py startapp app , este paso se debe confirmar ya que se crea una carpeta llamada app
 
+### Para levantar el servidor
 python manage.py runserver 0.0.0.0:8000
+
+### Para levantar el celery work -A
+
+/home/ngempin/.local/bin/celery -A backend_test worker -l info
+
+find /home -iname or -name celery, este comando es para buscar archivos segun el nombre
 
 Para navegar se puede utilizar w3m http://127.0.0.1:8000/
 
-celery -A backend_test worker -l info
 
-find /home -iname or -name celery, este comando es para buscar archivos segun el nombre
 
