@@ -496,6 +496,12 @@ class DjangoCeleryResultsTaskresult(models.Model):
     class Meta:
         managed = False
         db_table = 'django_celery_results_taskresult'
+        
+        
+pip install django-celery-beat
+/home/ngempin/.local/bin/celery -A celery_example beat -l info => monitoreo de las tareas
+
+
 
 
 
