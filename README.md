@@ -457,6 +457,15 @@ Para navegar se puede utilizar w3m http://127.0.0.1:8000/
 from notifications.tasks import sum
 t=sum.delay(3,5)
 t.status => necesitamos leer ese mensaje.
+Para evitar "AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'"
+t (enter)
+<AsyncResult: d988e167-c44f-4624-90f1-cb6f70002a64>
+Task notifications.tasks.sum[d988e167-c44f-4624-90f1-cb6f70002a64] succeeded in 5.006342895999751s: 5
+
+pip install django-celery-results
+
+
+
 
 
 
