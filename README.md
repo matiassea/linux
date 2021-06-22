@@ -436,7 +436,7 @@ to add $HOME/.local/bin to your $PATH for the future.
 ### Para comenzar el proyecto
 django-admin startproject celery_example
 
-### Para crear la carpeta
+### Para crear la carpeta o voler a correr las configuraciones
 python manage.py migrate
 
 ### Para crear la app
@@ -455,15 +455,28 @@ Para navegar se puede utilizar w3m http://127.0.0.1:8000/
 
 ### Para activar shell de python
 from notifications.tasks import sum
+
 t=sum.delay(3,5)
+
 t.status => necesitamos leer ese mensaje.
+
 Para evitar "AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'"
+
 t (enter)
+
 <AsyncResult: d988e167-c44f-4624-90f1-cb6f70002a64>
+
 Task notifications.tasks.sum[d988e167-c44f-4624-90f1-cb6f70002a64] succeeded in 5.006342895999751s: 5
 
+
+### Install django
 pip install django-celery-results
 
+python manage.py migrate
+
+Debe salir este mensaje => "Applying django_celery_results.0007_remove_taskresult_hidden... OK"
+
+python manage.py inspectdb
 
 
 
