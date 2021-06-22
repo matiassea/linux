@@ -453,5 +453,11 @@ find /home -iname or -name celery, este comando es para buscar archivos segun el
 
 Para navegar se puede utilizar w3m http://127.0.0.1:8000/
 
+### Para activar shell de python
+from notifications.tasks import sum
+t=sum.delay(3,5)
+t.status => necesitamos leer ese mensaje.
+
+
 
 
