@@ -478,6 +478,26 @@ Debe salir este mensaje => "Applying django_celery_results.0007_remove_taskresul
 
 python manage.py inspectdb
 
+class DjangoCeleryResultsTaskresult(models.Model):
+    task_id = models.CharField(unique=True, max_length=191)
+    status = models.CharField(max_length=50)
+    content_type = models.CharField(max_length=128)
+    content_encoding = models.CharField(max_length=64)
+    result = models.TextField(blank=True, null=True)
+    date_done = models.DateTimeField()
+    traceback = models.TextField(blank=True, null=True)
+    meta = models.TextField(blank=True, null=True)
+    task_args = models.TextField(blank=True, null=True)
+    task_kwargs = models.TextField(blank=True, null=True)
+    task_name = models.CharField(max_length=255, blank=True, null=True)
+    date_created = models.DateTimeField()
+    worker = models.CharField(max_length=100, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'django_celery_results_taskresult'
+
+
 
 
 
