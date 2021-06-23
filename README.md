@@ -4,6 +4,12 @@ Comandos generales de Linux
 Actualizacion del sistema operativo
 sudo apt-get update && sudo apt-get upgrade
 
+Levantamiento de errores
+GetManagedObjects() failed: org.freedesktop.systemd1.NoSuchUnit: Unit dbus-org.bluez.service not found.
+journalctl -p err..alert
+https://wiki.archlinux.org/title/Systemd/Journal
+
+
 # Instalacion de git
 sudo apt-get install git
 
