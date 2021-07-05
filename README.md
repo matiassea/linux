@@ -507,7 +507,23 @@ class DjangoCeleryResultsTaskresult(models.Model):
 pip install django-celery-beat
 /home/ngempin/.local/bin/celery -A celery_example beat -l info => monitoreo de las tareas
 
+### Comandos varios
+celery -A my_celery inspect schedule
+celery -A my_celery inspect revoked
+celery -A my_celery inspect stats
 
+### Para limpiar la cola
+celery -A my_celery purge
+celery -A my_celery purge -Q test
+
+### Events
+celery -A my_celery control enable_events
+celery -A my_celery events
+celery -A my_celery events --help
+
+### Flower
+pip install flower
+celery -A my_celery flower
 
 
 
