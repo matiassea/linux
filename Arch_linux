@@ -116,7 +116,7 @@ systemctl enable gdm
 reboot
 
 pacman -Syy
-pacman -Syu
+pacman -Syu => Para instalar los ultimos programas.
 
 #Termite
 sudo pacman -S termite
