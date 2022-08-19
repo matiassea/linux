@@ -201,6 +201,30 @@ escribir "wget [link copiado en Gzipped]"
 
 descomprimir con tar xwf [ruta de alojamiento]
 
+entrar a => su -
+
+ingresar a => root@debian:/home/ngempin/Downloads/Python-3.9.7# 
+
+en la carpeta de python ./configure
+
+./configure --enable-optimization
+
+en caso de error activar => sudo apt-get install build-essential
+
+en caso de dudas => cat README.rst 
+
+ṕroceso de compilacion => make
+
+Instalar el idle => sudo apt-get install idle3
+
+
+
+
+
+
+
+
+
 
 
 # Configure bash alieses
