@@ -182,17 +182,23 @@ airodump-ng wlan0 => para rescatar BSSID y chanel
 
 # Instalar GIT
 apt install git
+
 una vez instalado se puede ocupar "git clone URL", para bajar cualquier repositorio
 
 # Instalar screenfetch
 sudo apt-get install screenfetch
+
 screenfetch
 
 # Instalar Python
 https://www.python.org/downloads/source/
+
 En Gzipped.Copiar el enlace
+
 Asegurar que esta instalado wget
+
 escribir "wget [link copiado en Gzipped]"
+
 descomprimir con tar xwf [ruta de alojamiento]
 
 
