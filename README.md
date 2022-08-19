@@ -179,27 +179,22 @@ Atacando al 810 =>7C:DB:98:E2:95:FC CH1
 Atacando a la vecina => 18:70:3B:E6:FF:53 CH7
 airodump-ng wlan0 => para rescatar BSSID y chanel
 
+
+# Instalar GIT
+apt install git
+una vez instalado se puede ocupar "git clone URL", para bajar cualquier repositorio
+
 # Instalar screenfetch
 sudo apt-get install screenfetch
 screenfetch
 
 # Instalar Python
 https://www.python.org/downloads/source/
-Donwload Linux, Gzipped.
-Una vez bajado, extraer.
-Dentro de la carpeta Python "./configure"
-Despues script "make"
-Despues script "make install"
+En Gzipped.Copiar el enlace
+Asegurar que esta instalado wget
+escribir "wget [link copiado en Gzipped]"
+descomprimir con tar xwf [ruta de alojamiento]
 
-# Instalar ATOM
-Bajar: https://atom.io/ .deb
-dpkg -i atom-amd64(1).deb
-sudo apt --fix-broken install
-sudo apt install -f
-
-# Instalar GIT
-apt install git
-una vez instalado se puede ocupar "git clone URL", para bajar cualquier repositorio
 
 
 # Configure bash alieses
