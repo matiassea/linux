@@ -9,18 +9,28 @@ sudo apt-get -y install nano
 
 ## Para modificar bashrc
 echo $PATH
+
 abrir el bash rc => nano ~/.bashrc
+
 cargar el antiguo path con => 'export PATH="/home/dave/work:$PATH"'
+
 cargar el nuevo bashrc => source ~/.bashrc
 
 ## modificacion del bashrc
 para ver el actual path => echo $PATH => /usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+
 abrir  => nano ~/.bashrc
-al final del archivo colocar el antiguo path mas el nuevo 
+
+**al final del archivo colocar el antiguo path mas el nuevo **
+
 export PATH=[/home/dave/work]:$PATH
+
 cargar el antiguo path => 'export PATH="/home/dave/work:$PATH"'
+
 cargar => source ~/.bashrc
+
 o puede ser separado por :
+
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/ngempin/.local/bin"
 
 
@@ -28,43 +38,68 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/ngem
 
 ## Install Python
 sudo apt-get install python3
+
 sudo apt-get install python3-pip -y
+
 sudo apt-get install firefox -y
+
 pip install --upgrade pip
+
 pip install --upgrade virtualenv
 
 ## Install Screenfetch
 sudo apt-get install screenfetch -y o sudo pacman -S screenfetch
+
 ejecutar => screenfetch
 
 ## Para instalar git
+
 sudo apt install git
+
 sudo apt-get install git
+
 # Para instalar git
+
 sudo apt install git
 
 ### NodeJS
 
 ## Install Nodejs
+
 sudo apt-get update && sudo apt-get upgrade
+
 sudo apt install curl
+
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh
+
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
 source ~/.bashrc
+
 nvm list-remote
+
 nvm install v[N° version]
+
 nvm list
+
 sudo apt install npm
 
 ## Install npm
+
 sudo apt install npm
+
 npm -v
+
 sudo apt-get update && sudo apt-get upgrade
 
 ## Install PM2
+
 sudo npm install pm2 -g
+
 pm2 -v
+
 pm2 ls => procesos que estan en ejecucion
+
 pm2 startup => Para iniciarse (se copia y pega el comando que sugiere este comando)
 
 
@@ -74,13 +109,20 @@ pm2 startup => Para iniciarse (se copia y pega el comando que sugiere este coman
 sudo apt-get install python3-pip
 
 ## Virtualenv
+
 pip install virtualenv
+
 virtualenv --version
+
 Para crear => virtualenv [virtualenv_name]
+
 Para activar => source [virtualenv_name]/bin/activate
+
 Para desactivar => deactivate
 
+
 ## Para instalar librerias segun archivo de configuracion
+
 pip install -r requirements.txt
 
 
