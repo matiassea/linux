@@ -4,30 +4,47 @@ Comandos generales de Linux
 ### Actualizacion del sistema operativo
 sudo apt-get update && sudo apt-get upgrade
 
-## Instalar Nano
+### Instalar Nano
 sudo apt-get -y install nano
 
-## Para modificar bashrc
-echo $PATH
+## Uso de NANO BASH
 
-abrir el bash rc => nano ~/.bashrc
+ctrl + O => para poder guardar
 
-cargar el antiguo path con => 'export PATH="/home/dave/work:$PATH"'
+ctrl + s => guardar informacion
 
-cargar el nuevo bashrc => source ~/.bashrc
+ctrl + w => Buscar texto en particular
 
-## modificacion del bashrc
+ctrl + x => para salir
+
+alt + a y flechas para marcar texto, desmarcar alt + a
+
+copiar crtl + shift + c 
+
+pegar crtl + shift + v
+
+## Uso de Nano Bash
+
+Para comenzar un archivo @nano XXXX.sh\
+Para ejecturar el archivo @bash XXXX.sh\
+Para editar un archivo se ocupa el editor de texto nano\
+Para guardar el archivo se aprieta Ctrl + X, despues Yes\
+Para declarar una variable en un string puede ser con read o anteponiendo el signo $
+
+
+### Modificacion del bashrc
+
 para ver el actual path => echo $PATH => /usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 
-abrir  => nano ~/.bashrc
+abrir el bash  => nano ~/.bashrc
 
-**al final del archivo colocar el antiguo path mas el nuevo **
+**al final del archivo .bashrc colocar el antiguo path mas el nuevo **
 
 export PATH=[/home/dave/work]:$PATH
 
 cargar el antiguo path => 'export PATH="/home/dave/work:$PATH"'
 
-cargar => source ~/.bashrc
+cargar el nuevo bashrc => source ~/.bashrc
 
 o puede ser separado por :
 
@@ -35,6 +52,11 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/ngem
 
 
 ### Programas
+
+## Instalar screenfetch
+sudo apt-get install screenfetch
+
+screenfetch
 
 ## Install Python
 sudo apt-get install python3
@@ -52,15 +74,13 @@ sudo apt-get install screenfetch -y o sudo pacman -S screenfetch
 
 ejecutar => screenfetch
 
-## Para instalar git
+## Install git
 
 sudo apt install git
 
 sudo apt-get install git
 
-# Para instalar git
-
-sudo apt install git
+una vez instalado se puede ocupar "git clone URL", para bajar cualquier repositorio
 
 ### NodeJS
 
@@ -114,9 +134,13 @@ pip install virtualenv
 
 virtualenv --version
 
-Para crear => virtualenv [virtualenv_name]
 
-Para activar => source [virtualenv_name]/bin/activate
+
+### Para activar entorno virtual
+
+Para crear => virtualenv [virtualenv_name] => virtualenv env
+
+Para activar => source [virtualenv_name]/bin/activate => source env/bin/activate
 
 Para desactivar => deactivate
 
@@ -131,27 +155,6 @@ GetManagedObjects() failed: org.freedesktop.systemd1.NoSuchUnit: Unit dbus-org.b
 journalctl -p err..alert
 https://wiki.archlinux.org/title/Systemd/Journal
 
-
-# Instalacion de git
-sudo apt-get install git
-
-# Uso de NANO BASH
-ctrl + O => para poder guardar
-
-ctrl + s => guardar informacion
-
-ctrl + w => Buscar texto en particular
-
-ctrl + x => para salir
-
-alt + a y flechas para marcar texto, desmarcar alt + a
-
-copiar crtl + shift + c 
-
-pegar crtl + shift + v
-
-
-# Htop
 
 # Para control de datos de la red
 
@@ -211,9 +214,46 @@ ip iphone 192.168.1.83
 min 10:00 Nmap tutorial to find networks vulnerabilities
 
 
+## Informacion del hardware
+
+lscpu => procesador
+
+listado de hardware => sudo apt-get install lshw => sudo lshw -short
+
+sudo apt-get install hwinfo => sudo hwinfo --short
+
+## Testeo de memoria RAM
+
+sudo apt install dmidecode
+
+sudo dmidecode --type 17
+
+sudo apt install cpu-x
+
+sudo cpu-x
+
+
+## Informacion de la arquitectura
+
+Para saber la arquitectura de un Linux => uname –m
+
+x86_64 = > es el correcto, 64 bits
+
+If the response is i686, you have a 32-bit version of Linux.\
+
+If the response is x86_64, you have a 64-bit version of Linux.\
+
+You can find out more detail about your particular installation of Linux, like your kernel version, by entering => uname –a
+
+
+
 # Comandos generales
 
-man ls => Ayuda del comando
+crear carpeta => mkdir [nombre carpeta]
+
+crear archivo => touch main.py
+
+Ayuda del comando ls => man ls
 
 ls -l -a
 
@@ -229,13 +269,13 @@ ls --file-type
 
 ls --file-type -a -l
 
-ls -a -l -R => busqueda recursiva y con informacion completa
+busqueda recursiva y con informacion completa => ls -a -l -R
 
-ls -h -l -R. Vista de archivos recursivas, vista humana y que muestre los permisos
+Vista de archivos recursivas, vista humana y que muestre los permisos => ls -h -l -R. 
 
-cat,less XXXXX.XXX => Para abir archivos
+Para abir archivos => cat,less XXXXX.XXX
 
-rm -d dirname => To remove one or more empty directories use the -d option
+To remove one or more empty directories use the -d option => rm -d dirname 
 
 sudo rm -rvi app/ => If you want rm to ask you to confirm before deleting every directories and files
 
@@ -247,13 +287,27 @@ Para crear alias ipaddress="ifconfig | grep broadcast | awk '{print $2}'"
 
 alias ipaddress="echo $(ifconfig | grep broadcast | awk '{print $2}')"
 
+
+## Manejo de archivos comprimidos
+
+wget -c [URL] -O - | tar -xz
+
+The wget option -O specifies a file to which the documents is written, and here we use -, meaning it will written to standard output and piped to tar and the tar flag -x enables extraction of archive files and -z decompresses, compressed archive files created by gzip.
+
+To extract tar files to specific directory, /etc/nginx/ in this case, include use the -C flag as follows.
+$ sudo wget -c [URL] -O - | sudo tar -xz -C /home/ngempin/server_aws
+
+Extraer y copiar archivo a otro directorio
+tar -xf [file_name.tar] -C [/target/directory]
+
+
 # Control de procesos
 
 ps aux | more
 
 ps aux
 
-## Instalando TOP
+### Instalando HTOP
 
 sudo apt-get install htop
 
@@ -302,17 +356,23 @@ Atacando a la vecina => 18:70:3B:E6:FF:53 CH7
 airodump-ng wlan0 => para rescatar BSSID y chanel
 
 
-# Instalar GIT
-apt install git
 
-una vez instalado se puede ocupar "git clone URL", para bajar cualquier repositorio
+## Instalar Python
 
-# Instalar screenfetch
-sudo apt-get install screenfetch
+sudo apt install python-pip
 
-screenfetch
+sudo apt install python3-pip
 
-# Instalar Python
+python -v
+
+python3 -v
+
+pip -v
+
+pip3 -v
+
+## Instalar Python
+
 https://www.python.org/downloads/source/
 
 En Gzipped.Copiar el enlace
@@ -340,46 +400,51 @@ en caso de dudas => cat README.rst
 Instalar el idle => sudo apt-get install idle3
 
 
+## Xclip
+
+reemplaza a pyperclip
+
+sudo apt-get install xclip
+
+
+## Geckodriver
+
+wget https://github.com/mozilla/geckodriver/releases/download/v0.29.0/geckodriver-v0.29.0-linux32.tar.gz
+
+tar -xvzf geckodriver-v0.29.0-linux32.tar.gz 
+
+For Linux based system, download geckodriver. Extract it and copy the driver to /usr/local/bin and finally make it executable (chmod +x geckodriver).
 
 
 
 
+## Configure bash alieses
 
-
-
-
-
-# Configure bash alieses
 nano -/.bash_aliases
+
 open nano
+
 alias hackwifi='besside-ng wlan0'
+
 Ctrl + S
+
 Y
+
 enter
+
 hackwifi
 
 Para actualizar el paquete de instalacion
 sudo apt install
 
 # Arch
+
 pacman -Syu
+
 https://wiki.archlinux.org/title/System_maintenance#Upgrading_the_system
 
 Use pacman -Qtd to check for packages that were installed as a dependency but now, no other packages depend on them. If an orphaned package is still needed, it is recommended to change the installation reason to explicit. Otherwise, if the package is no longer needed, it can be removed. 
 
-
-
-# Para saber la arquitectura de un Linux
-uname –m\
-x86_64 = > es el correcto, 64 bits\
-If the response is i686, you have a 32-bit version of Linux.\
-If the response is x86_64, you have a 64-bit version of Linux.\
-uname –a\
-You can find out more detail about your particular installation of Linux, like your kernel version, by entering\
-Se debe instalar Kali Linux para 64 bits\
-
-Linux kali 5.9.0-kali1-686-pae #1 SMP Debian 5.9.1-1kali2 (2020-10-29) i686 GNU/Linux\
-i686\
 
 
 # SQLMAP
@@ -390,13 +455,6 @@ http://achap.cl/festival_2017/ganadores_categoria.php?id=4
 
 
 
-## Uso de Nano Bash
-
-Para comenzar un archivo @nano XXXX.sh\
-Para ejecturar el archivo @bash XXXX.sh\
-Para editar un archivo se ocupa el editor de texto nano\
-Para guardar el archivo se aprieta Ctrl + X, despues Yes\
-Para declarar una variable en un string puede ser con read o anteponiendo el signo $
 
 
 
@@ -442,6 +500,7 @@ set LHOST 192.168.1.91
 
 
 # Celery
+
 1)	“django-admin.py startproject src”. Para comenzar haciendo la carpeta de configuración
 
 2)	Para el proyecto se debe crear base de datos, q por omision en django funciona con SQL.
