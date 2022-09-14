@@ -4,10 +4,10 @@ Comandos generales de Linux
 ### Actualizacion del sistema operativo
 sudo apt-get update && sudo apt-get upgrade
 
-### Instalar Nano
+## Instalar Nano
 sudo apt-get -y install nano
 
-## Uso de NANO BASH
+### Uso de NANO BASH
 
 ctrl + O => para poder guardar
 
@@ -23,16 +23,20 @@ copiar crtl + shift + c
 
 pegar crtl + shift + v
 
-## Uso de Nano Bash
+### Uso de Nano Bash
 
 Para comenzar un archivo @nano XXXX.sh\
+
 Para ejecturar el archivo @bash XXXX.sh\
+
 Para editar un archivo se ocupa el editor de texto nano\
+
 Para guardar el archivo se aprieta Ctrl + X, despues Yes\
+
 Para declarar una variable en un string puede ser con read o anteponiendo el signo $
 
 
-### Modificacion del bashrc
+## Modificacion del bashrc
 
 para ver el actual path => echo $PATH => /usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 
@@ -51,14 +55,16 @@ o puede ser separado por :
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/ngempin/.local/bin"
 
 
-### Programas
+## Programas
 
-## Instalar screenfetch
+### Instalar screenfetch
+
 sudo apt-get install screenfetch
 
 screenfetch
 
-## Install Python
+### Install Python
+
 sudo apt-get install python3
 
 sudo apt-get install python3-pip -y
@@ -69,12 +75,13 @@ pip install --upgrade pip
 
 pip install --upgrade virtualenv
 
-## Install Screenfetch
+### Install Screenfetch
+
 sudo apt-get install screenfetch -y o sudo pacman -S screenfetch
 
 ejecutar => screenfetch
 
-## Install git
+### Install git
 
 sudo apt install git
 
@@ -82,9 +89,9 @@ sudo apt-get install git
 
 una vez instalado se puede ocupar "git clone URL", para bajar cualquier repositorio
 
-### NodeJS
+## NodeJS
 
-## Install Nodejs
+### Install Nodejs
 
 sudo apt-get update && sudo apt-get upgrade
 
@@ -123,18 +130,16 @@ pm2 ls => procesos que estan en ejecucion
 pm2 startup => Para iniciarse (se copia y pega el comando que sugiere este comando)
 
 
-### Python
+## Python
 
-# Para instalar pip
+### Para instalar pip
 sudo apt-get install python3-pip
 
-## Virtualenv
+### Virtualenv
 
 pip install virtualenv
 
 virtualenv --version
-
-
 
 ### Para activar entorno virtual
 
@@ -145,7 +150,7 @@ Para activar => source [virtualenv_name]/bin/activate => source env/bin/activate
 Para desactivar => deactivate
 
 
-## Para instalar librerias segun archivo de configuracion
+### Para instalar librerias segun archivo de configuracion
 
 pip install -r requirements.txt
 
@@ -166,7 +171,9 @@ nethogs
 # Discos en Linux
 
 sda
+
 sdb
+
 sd0 o sr0
 
 
@@ -233,7 +240,7 @@ sudo apt install cpu-x
 sudo cpu-x
 
 
-## Informacion de la arquitectura
+### Informacion de la arquitectura
 
 Para saber la arquitectura de un Linux => uname –m
 
@@ -247,7 +254,7 @@ You can find out more detail about your particular installation of Linux, like y
 
 
 
-# Comandos generales
+### Comandos generales
 
 crear carpeta => mkdir [nombre carpeta]
 
@@ -288,7 +295,7 @@ Para crear alias ipaddress="ifconfig | grep broadcast | awk '{print $2}'"
 alias ipaddress="echo $(ifconfig | grep broadcast | awk '{print $2}')"
 
 
-## Manejo de archivos comprimidos
+### Manejo de archivos comprimidos
 
 wget -c [URL] -O - | tar -xz
 
@@ -301,7 +308,7 @@ Extraer y copiar archivo a otro directorio
 tar -xf [file_name.tar] -C [/target/directory]
 
 
-# Control de procesos
+### Control de procesos
 
 ps aux | more
 
@@ -357,7 +364,7 @@ airodump-ng wlan0 => para rescatar BSSID y chanel
 
 
 
-## Instalar Python
+### Instalar Python
 
 sudo apt install python-pip
 
@@ -371,7 +378,7 @@ pip -v
 
 pip3 -v
 
-## Instalar Python
+### Instalar Python
 
 https://www.python.org/downloads/source/
 
@@ -499,7 +506,7 @@ set LHOST 192.168.1.91
 
 
 
-# Celery
+## Celery
 
 1)	“django-admin.py startproject src”. Para comenzar haciendo la carpeta de configuración
 
@@ -522,7 +529,7 @@ set LHOST 192.168.1.91
 10)	url.py genera listado de URL a ser vistas, se genera dentro de la tupla. Aquí se generan las rutas
 
 
-# Celery
+## Celery
 
 django-admin.py startproject django_email_celery  Para crear el projecto
 python manage.py startapp example  Para crear carpeta example
@@ -536,7 +543,7 @@ Y se confirmo con Putty, opción Telnet, localhost, puerto 19960
 Para corrrer Celery en cmd de la carpeta
 celery -A django_email_celery worker -l info
  
-# Test Cornershop
+## Test Cornershop
 
 Para instalar todas las librerias segur requirements.txt
 
@@ -574,7 +581,7 @@ python manage.py runserver 0.0.0.0:8000
 
 Instalo Docker Toolbox, debido a que es para Windows menor a V10.
 
-# Instalacion de Docker en Linux
+### Instalacion de Docker en Linux
 
 Sudo apt install Docker.io
 
@@ -599,7 +606,7 @@ Desde una imagen se puede ejecutar multiples contenedores (procesos) desde solo 
 Docker rm ID=> para eliminar el proceso
 
 
-# Docker en Linux
+## Docker en Linux
 
 Todos los comandos de Docker se corren con SUDO
 
@@ -613,7 +620,7 @@ Si todo sale bien debe probarse por medio de Docker verion o sudo Docker run hel
 
 Despues se debe a ver el “Post—installation steps for Linux” para instalar sacar el sudo de los comandos dockers
  
-# Memoria Swap
+### Memoria Swap
 
 Aumento de la memoria 
 
@@ -621,7 +628,7 @@ Swappiness puede tener un valor entre 0 y 100, pero por defecto se utiliza 60. H
 
 Cuanto mayor sea el valor del parámetro swappiness, más agresivamente el kernel utilizará swap. Por ello, se recomienda utilizar un valor bajo que reduzca el intercambio desde RAM y mejore la capacidad de respuesta del sistema (rendimiento global, funcionalidad y velocidad del sistema operativo).
 
-# Operacion con archivo Make
+### Operacion con archivo Make
 
 make -f Makefile
 
