@@ -63,6 +63,16 @@ sudo apt-get install screenfetch
 
 screenfetch
 
+### Mediciones de rendimiento
+
+free -h
+
+df -h
+
+systemd-analyze
+
+systemd-analyze blame | head
+
 ### Install Python
 
 sudo apt-get install python3
@@ -75,17 +85,12 @@ pip install --upgrade pip
 
 pip install --upgrade virtualenv
 
-### Install Screenfetch
-
-sudo apt-get install screenfetch -y o sudo pacman -S screenfetch
-
-ejecutar => screenfetch
 
 ### Install git
 
-sudo apt install git
+sudo apt install git -y
 
-sudo apt-get install git
+sudo apt-get install git -y
 
 una vez instalado se puede ocupar "git clone URL", para bajar cualquier repositorio
 
@@ -105,7 +110,7 @@ source ~/.bashrc
 
 nvm list-remote
 
-nvm install v[N° version]
+nvm install v<N° version> v12.22.12
 
 nvm list
 
@@ -123,11 +128,18 @@ sudo apt-get update && sudo apt-get upgrade
 
 sudo npm install pm2 -g
 
+En caso de error por deprecacion de "npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher"
+npm install uuid@latest 
+
 pm2 -v
 
 pm2 ls => procesos que estan en ejecucion
 
 pm2 startup => Para iniciarse (se copia y pega el comando que sugiere este comando)
+
+## AWS
+
+ssh -i "Server V26092022.pem" admin@ec2-3-142-225-147.us-east-2.compute.amazonaws.com
 
 
 ## Python
