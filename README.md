@@ -2,7 +2,13 @@
 Comandos generales de Linux
 
 ### Actualizacion del sistema operativo
-sudo apt-get update && sudo apt-get upgrade
+sudo apt update
+
+sudo apt full-upgrade
+
+sudo apt upgrade
+
+sudo apt update && sudo apt upgrade -y
 
 ## Instalar Nano
 sudo apt-get -y install nano
@@ -145,6 +151,7 @@ ssh -i "Server V26092022.pem" admin@ec2-3-142-225-147.us-east-2.compute.amazonaw
 ## Python
 
 ### Para instalar pip
+
 sudo apt-get install python3-pip
 
 ### Virtualenv
@@ -273,6 +280,8 @@ crear carpeta => mkdir [nombre carpeta]
 crear archivo => touch main.py
 
 Ayuda del comando ls => man ls
+
+Informacion del archivo => stat <file_name> 
 
 ls -l -a
 
