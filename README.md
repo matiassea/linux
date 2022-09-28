@@ -100,6 +100,28 @@ sudo apt-get install git -y
 
 una vez instalado se puede ocupar "git clone URL", para bajar cualquier repositorio
 
+#### Para instalar en servidor
+
+https://namespaceit.com/blog/remote-support-for-password-authentication-was-removed-on-august-13-2021-please-use-a-personal-access-token-instead
+
+git config --global user.name matiassea
+
+git config --global user.email matiassea@hotmail.com
+
+git config -l
+
+git clone https://github.com/matiassea/Servidor_RPA.git
+
+git clone --branch <branchname> <remote-repo-url>
+
+Username for 'https://github.com' : matiassea
+
+Password for 'https://github.com' : <token>
+
+git config --global credential.helper cache
+
+git pull -v
+
 ## NodeJS
 
 ### Install Nodejs
@@ -174,6 +196,31 @@ Para desactivar => deactivate
 pip install -r requirements.txt
 
 
+# Levantamiento de servidor
+
+Para clonar una rama en especifico
+
+git clone --branch <branchname> <remote-repo-url>
+
+npm install en la carpeta => aparecera la carpeta node_modules
+
+crear el virtualenv
+
+ingresar al virtual env
+
+instalar las librerias segunr requierments.txt
+
+deactivate
+
+cambiar el link de spawn
+
+instalar const {performance} = require('perf_hooks'); en worker
+
+se cambia el path para adjuntar archivos en el envio de email
+
+
+
+
 Levantamiento de errores
 GetManagedObjects() failed: org.freedesktop.systemd1.NoSuchUnit: Unit dbus-org.bluez.service not found.
 journalctl -p err..alert
@@ -183,7 +230,9 @@ https://wiki.archlinux.org/title/Systemd/Journal
 # Para control de datos de la red
 
 aptitude search nethogs
+
 sudo apt install nethogs
+
 nethogs
 
 
@@ -248,6 +297,7 @@ listado de hardware => sudo apt-get install lshw => sudo lshw -short
 
 sudo apt-get install hwinfo => sudo hwinfo --short
 
+
 ## Testeo de memoria RAM
 
 sudo apt install dmidecode
@@ -280,6 +330,8 @@ crear carpeta => mkdir [nombre carpeta]
 crear archivo => touch main.py
 
 Ayuda del comando ls => man ls
+
+Para borrar directorio completo => rm -rf <directoryName>
 
 Informacion del archivo => stat <file_name> 
 
