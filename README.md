@@ -186,9 +186,9 @@ virtualenv --version
 
 ### Para activar entorno virtual
 
-Para crear => virtualenv [virtualenv_name] => virtualenv env
+Para crear => virtualenv <virtualenv_name> => virtualenv env
 
-Para activar => source [virtualenv_name]/bin/activate => source env/bin/activate
+Para activar => source <virtualenv_name>/bin/activate => source env/bin/activate
 
 Para desactivar => deactivate
 
@@ -204,7 +204,7 @@ pip install -r requirements.txt
 
 git clone https://github.com/matiassea/Servidor_RPA.git
 
-git clone --branch branchname remote-repo-url
+git clone --branch <branchName> <remote-repo-url>
 
 Username for 'https://github.com' : matiassea
 
@@ -216,9 +216,9 @@ ejecutar "npm install" en la carpeta del servidor, aparecera la carpeta node_mod
 
 ### Virtualenv
 
- Para crear => virtualenv [virtualenv_name] => virtualenv env
+Para crear => virtualenv <virtualenv_name> => virtualenv env
 
-Para activar => source [virtualenv_name]/bin/activate => source env/bin/activate
+Para activar => source <virtualenv_name>/bin/activate => source env/bin/activate
 
 Para desactivar => deactivate
 
@@ -342,13 +342,15 @@ You can find out more detail about your particular installation of Linux, like y
 
 ### Comandos generales
 
-crear carpeta => mkdir [nombre carpeta]
+crear carpeta => mkdir <dirName>
 
-crear archivo => touch main.py
+crear archivo => touch <fileName.py>
 
 Ayuda del comando ls => man ls
 
 Para borrar directorio completo => rm -rf <directoryName>
+ 
+Para borrar un archivo => rm <fileName>
 
 Informacion del archivo => stat <file_name> 
 
