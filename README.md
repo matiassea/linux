@@ -60,6 +60,12 @@ o puede ser separado por :
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/ngempin/.local/bin"
 
+## Para crear Aliases
+
+sudo nano ~/.bash_aliases
+
+source ~/.bash_aliases
+
 
 ## Programas
 
@@ -120,10 +126,6 @@ Username for 'https://github.com' : matiassea
 
 Password for 'https://github.com' : <token>
 
-git config --global credential.helper cache
-
-git pull -v
-
 ## NodeJS
 
 ### Install Nodejs
@@ -131,8 +133,6 @@ git pull -v
 sudo apt-get update && sudo apt-get upgrade
 
 sudo apt install curl
-
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 
