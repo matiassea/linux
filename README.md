@@ -110,6 +110,8 @@ git config --global user.email matiassea@hotmail.com
 
 git config -l
 
+### Clonar una rama en especifico
+
 git clone https://github.com/matiassea/Servidor_RPA.git
 
 git clone --branch <branchname> <remote-repo-url>
@@ -196,25 +198,31 @@ Para desactivar => deactivate
 pip install -r requirements.txt
 
 
-# Levantamiento de servidor
+# Levantamiento de servidor en EC2
 
-Para clonar una rama en especifico
+### Clonar una rama en especifico
+
+git clone https://github.com/matiassea/Servidor_RPA.git
 
 git clone --branch <branchname> <remote-repo-url>
 
-npm install en la carpeta => aparecera la carpeta node_modules
+### Instalar las librerias para Node
+ 
+ejecutar "npm install" en la carpeta del servidor, aparecera la carpeta node_modules
 
+### Virtualenv
+ 
 crear el virtualenv
 
 ingresar al virtual env
 
-instalar las librerias segunr requierments.txt
+instalar las librerias segun requierments.txt => pip install -r requirements.txt
 
 deactivate
-
-cambiar el link de spawn
-
-instalar const {performance} = require('perf_hooks'); en worker
+ 
+### Revisar .env
+ 
+Variables de entorno de Virtualenv y Impresion_OC
 
 se cambia el path para adjuntar archivos en el envio de email
 
@@ -222,9 +230,12 @@ se cambia el path para adjuntar archivos en el envio de email
 
 
 Levantamiento de errores
+
 GetManagedObjects() failed: org.freedesktop.systemd1.NoSuchUnit: Unit dbus-org.bluez.service not found.
+
 journalctl -p err..alert
-https://wiki.archlinux.org/title/Systemd/Journal
+
+ https://wiki.archlinux.org/title/Systemd/Journal
 
 
 # Para control de datos de la red
