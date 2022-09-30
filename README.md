@@ -114,7 +114,7 @@ git config -l
 
 git clone https://github.com/matiassea/Servidor_RPA.git
 
-git clone --branch <branchname> <remote-repo-url>
+git clone --branch branchname remote-repo-url
 
 Username for 'https://github.com' : matiassea
 
@@ -204,7 +204,7 @@ pip install -r requirements.txt
 
 git clone https://github.com/matiassea/Servidor_RPA.git
 
-git clone --branch <branchname> <remote-repo-url>
+git clone --branch branchname remote-repo-url
 
 ### Instalar las librerias para Node
  
