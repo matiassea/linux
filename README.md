@@ -206,6 +206,10 @@ git clone https://github.com/matiassea/Servidor_RPA.git
 
 git clone --branch branchname remote-repo-url
 
+Username for 'https://github.com' : matiassea
+
+ Password for 'https://github.com' : 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
+ 
 ### Instalar las librerias para Node
  
 ejecutar "npm install" en la carpeta del servidor, aparecera la carpeta node_modules
