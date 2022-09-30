@@ -215,14 +215,16 @@ Username for 'https://github.com' : matiassea
 ejecutar "npm install" en la carpeta del servidor, aparecera la carpeta node_modules
 
 ### Virtualenv
- 
-crear el virtualenv
 
-ingresar al virtual env
+ Para crear => virtualenv [virtualenv_name] => virtualenv env
 
-instalar las librerias segun requierments.txt => pip install -r requirements.txt
+Para activar => source [virtualenv_name]/bin/activate => source env/bin/activate
 
-deactivate
+Para desactivar => deactivate
+
+### Para instalar librerias segun archivo de configuracion
+
+pip install -r requirements.txt 
  
 ### Revisar .env
  
