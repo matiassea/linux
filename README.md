@@ -91,11 +91,44 @@ sudo apt-get install python3
 
 sudo apt-get install python3-pip -y
 
-sudo apt-get install firefox -y
-
 pip install --upgrade pip
 
 pip install --upgrade virtualenv
+
+
+### Instalacion de Firefox
+
+Step1 : Download Firefox
+sudo apt-get install firefox-esr
+
+
+### Instalacion de Gecko Driver
+
+https://github.com/mozilla/geckodriver/releases
+
+Step1 : Download Gecko Driver
+wget https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz
+
+Step2: Unzip tar file
+sudo tar -xvf geckodriver-v0.30.0-linux64.tar.gz
+
+Step3: Move Gecko Driver to Binary Location
+sudo mv geckodriver /usr/local/bin/
+
+Step4: Change Current Directory to Binary Location
+cd /usr/local/bin/
+
+Step5: Make Executable Permission to 'geckodriver'
+sudo chmod +x geckodriver
+
+Step6: Add path
+/usr/local/bin/geckodriver
+
+Step6: Open bashrc
+nano ~/.bashrc
+
+Step7: Load bashrc
+source ~/.bashrc
 
 
 ### Install git
