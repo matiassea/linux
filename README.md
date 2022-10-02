@@ -57,23 +57,22 @@ cargar el antiguo path => 'export PATH="/home/dave/work:$PATH"'
 cargar el nuevo bashrc => source ~/.bashrc
 
 o puede ser separado por :
-
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/ngempin/.local/bin"
+> export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/ngempin/.local/bin"
 
 ## Para crear Aliases
 
-sudo nano ~/.bash_aliases
+Modificar el bash aliases
+> sudo nano ~/.bash_aliases
 
-source ~/.bash_aliases
+Cargar el nuevo bash aliases
+> source ~/.bash_aliases
 
 
 ## Programas
 
 ### Instalar screenfetch
-
-sudo apt-get install screenfetch
-
-screenfetch
+> sudo apt-get install screenfetch
+> screenfetch
 
 ### Mediciones de rendimiento
 
@@ -99,7 +98,7 @@ pip install --upgrade virtualenv
 ### Instalacion de Firefox
 
 Step1 : Download Firefox
-sudo apt-get install firefox-esr
+> sudo apt-get install firefox-esr
 
 
 ### Instalacion de Gecko Driver
@@ -107,28 +106,28 @@ sudo apt-get install firefox-esr
 https://github.com/mozilla/geckodriver/releases
 
 Step1 : Download Gecko Driver
-wget https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz
+> wget https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz
 
 Step2: Unzip tar file
-sudo tar -xvf geckodriver-v0.30.0-linux64.tar.gz
+> sudo tar -xvf geckodriver-v0.30.0-linux64.tar.gz
 
 Step3: Move Gecko Driver to Binary Location
-sudo mv geckodriver /usr/local/bin/
+> sudo mv geckodriver /usr/local/bin/
 
 Step4: Change Current Directory to Binary Location
-cd /usr/local/bin/
+> cd /usr/local/bin/
 
 Step5: Make Executable Permission to 'geckodriver'
-sudo chmod +x geckodriver
+> sudo chmod +x geckodriver
 
 Step6: Add path
-/usr/local/bin/geckodriver
+> /usr/local/bin/geckodriver
 
 Step6: Open bashrc
-nano ~/.bashrc
+> nano ~/.bashrc
 
 Step7: Load bashrc
-source ~/.bashrc
+> source ~/.bashrc
 
 
 ### Install git
