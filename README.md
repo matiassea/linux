@@ -12,18 +12,23 @@ sudo apt-get -y install nano
 
 ### Uso de NANO BASH
 Para poder guardar
-> ctrl + O 
-guardar informacion
+> ctrl + O
+ 
+Guardar informacion
 > ctrl + s
+
 Buscar texto en particular
 > ctrl + w 
+
 Para salir
 > ctrl + x 
 
 > alt + a y flechas para marcar texto, desmarcar alt + a
-copiar 
+
+Copiar 
 > crtl + shift + c 
-pegar 
+
+Pegar 
 > crtl + shift + v
 
 ### Uso de Nano Bash
