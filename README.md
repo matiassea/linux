@@ -11,14 +11,15 @@ Comandos generales de Linux
 sudo apt-get -y install nano
 
 ### Uso de NANO BASH
-para poder guardar
+Para poder guardar
 > ctrl + O 
 guardar informacion
 > ctrl + s
 Buscar texto en particular
 > ctrl + w 
-para salir
+Para salir
 > ctrl + x 
+
 > alt + a y flechas para marcar texto, desmarcar alt + a
 copiar 
 > crtl + shift + c 
