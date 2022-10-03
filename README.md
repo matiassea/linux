@@ -2,32 +2,28 @@
 Comandos generales de Linux
 
 ### Actualizacion del sistema operativo
-sudo apt update
-
-sudo apt full-upgrade
-
-sudo apt upgrade
-
-sudo apt update && sudo apt upgrade -y
+> sudo apt update
+> sudo apt full-upgrade
+> sudo apt upgrade
+> sudo apt update && sudo apt upgrade -y
 
 ## Instalar Nano
 sudo apt-get -y install nano
 
 ### Uso de NANO BASH
-
-ctrl + O => para poder guardar
-
-ctrl + s => guardar informacion
-
-ctrl + w => Buscar texto en particular
-
-ctrl + x => para salir
-
-alt + a y flechas para marcar texto, desmarcar alt + a
-
-copiar crtl + shift + c 
-
-pegar crtl + shift + v
+para poder guardar
+> ctrl + O 
+guardar informacion
+> ctrl + s
+Buscar texto en particular
+> ctrl + w 
+para salir
+> ctrl + x 
+> alt + a y flechas para marcar texto, desmarcar alt + a
+copiar 
+> crtl + shift + c 
+pegar 
+> crtl + shift + v
 
 ### Uso de Nano Bash
 
@@ -44,17 +40,21 @@ Para declarar una variable en un string puede ser con read o anteponiendo el sig
 
 ## Modificacion del bashrc
 
-para ver el actual path => echo $PATH => /usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+para ver el actual path
+> echo $PATH => /usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 
-abrir el bash  => nano ~/.bashrc
+abrir el bash  => 
+> nano ~/.bashrc
 
 **al final del archivo .bashrc colocar el antiguo path mas el nuevo **
 
 export PATH=[/home/dave/work]:$PATH
 
-cargar el antiguo path => 'export PATH="/home/dave/work:$PATH"'
+cargar el antiguo path
+> 'export PATH="/home/dave/work:$PATH"'
 
-cargar el nuevo bashrc => source ~/.bashrc
+cargar el nuevo bashrc
+> source ~/.bashrc
 
 o puede ser separado por :
 > export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/ngempin/.local/bin"
@@ -67,7 +67,6 @@ Modificar el bash aliases
 Cargar el nuevo bash aliases
 > source ~/.bash_aliases
 
-
 ## Programas
 
 ### Instalar screenfetch
@@ -76,34 +75,25 @@ Cargar el nuevo bash aliases
 
 ### Mediciones de rendimiento
 
-free -h
-
-df -h
-
-systemd-analyze
-
-systemd-analyze blame | head
+> free -h
+> df -h
+> systemd-analyze
+> systemd-analyze blame | head
 
 ### Install Python
 
-sudo apt-get install python3
-
-sudo apt-get install python3-pip -y
-
-pip install --upgrade pip
-
-pip install --upgrade virtualenv
-
+> sudo apt-get install python3
+> sudo apt-get install python3-pip -y
+> pip install --upgrade pip
+> pip install --upgrade virtualenv
 
 ### Instalacion de Firefox
 
 Step1 : Download Firefox
 > sudo apt-get install firefox-esr
 
-
 ### Instalacion de Gecko Driver
-
-https://github.com/mozilla/geckodriver/releases
+> https://github.com/mozilla/geckodriver/releases
 
 Step1 : Download Gecko Driver
 > wget https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz
@@ -129,14 +119,11 @@ Step6: Open bashrc
 Step7: Load bashrc
 > source ~/.bashrc
 
-
 ### Install git
 
-sudo apt install git -y
-
-sudo apt-get install git -y
-
-una vez instalado se puede ocupar "git clone URL", para bajar cualquier repositorio
+> sudo apt install git -y
+> sudo apt-get install git -y
+> una vez instalado se puede ocupar "git clone URL", para bajar cualquier repositorio
 
 #### Para instalar en servidor
 
