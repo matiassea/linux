@@ -11,66 +11,67 @@ Comandos generales de Linux
 sudo apt-get -y install nano
 
 ### Uso de NANO BASH
-Para poder guardar
+- Para poder guardar
 > ctrl + O
  
-Guardar informacion
+- Guardar informacion
 > ctrl + s
 
-Buscar texto en particular
+- Buscar texto en particular
 > ctrl + w 
 
-Para salir
+- Para salir
 > ctrl + x 
 
 > alt + a y flechas para marcar texto, desmarcar alt + a
 
-Copiar 
+- Copiar 
 > crtl + shift + c 
 
-Pegar 
+- Pegar 
 > crtl + shift + v
 
 ### Uso de Nano Bash
 
-Para comenzar un archivo @nano XXXX.sh\
+- Para comenzar un archivo 
+> nano XXXX.sh\
 
-Para ejecturar el archivo @bash XXXX.sh\
+- Para ejecturar el archivo 
+> bash XXXX.sh\
 
-Para editar un archivo se ocupa el editor de texto nano\
-
-Para guardar el archivo se aprieta Ctrl + X, despues Yes\
+- Para guardar el archivo se aprieta 
+> Ctrl + X, despues Yes\
 
 Para declarar una variable en un string puede ser con read o anteponiendo el signo $
 
 
 ## Modificacion del bashrc
 
-para ver el actual path
+- para ver el actual path
 > echo $PATH => /usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 
-abrir el bash  => 
+- abrir el bash  => 
 > nano ~/.bashrc
 
 **al final del archivo .bashrc colocar el antiguo path mas el nuevo **
 
 export PATH=[/home/dave/work]:$PATH
 
-cargar el antiguo path
+- cargar el antiguo path
 > 'export PATH="/home/dave/work:$PATH"'
 
-cargar el nuevo bashrc
+- cargar el nuevo bashrc
 > source ~/.bashrc
 
-o puede ser separado por :
+- o puede ser separado por :
 > export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/ngempin/.local/bin"
 
 ## Para crear Aliases
 
-Modificar el bash aliases
+- Modificar el bash aliases
 > sudo nano ~/.bash_aliases
 
-Cargar el nuevo bash aliases
+- Cargar el nuevo bash aliases
 > source ~/.bash_aliases
 
 ## Programas
@@ -95,61 +96,63 @@ Cargar el nuevo bash aliases
 
 ### Instalacion de Firefox
 
-Step1 : Download Firefox
+- Step1 : Download Firefox
 > sudo apt-get install firefox-esr
 
 ### Instalacion de Gecko Driver
 > https://github.com/mozilla/geckodriver/releases
 
-Step1 : Download Gecko Driver
+- Step1 : Download Gecko Driver
 > wget https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz
 
-Step2: Unzip tar file
+- Step2: Unzip tar file
 > sudo tar -xvf geckodriver-v0.30.0-linux64.tar.gz
 
-Step3: Move Gecko Driver to Binary Location
+- Step3: Move Gecko Driver to Binary Location
 > sudo mv geckodriver /usr/local/bin/
 
-Step4: Change Current Directory to Binary Location
+- Step4: Change Current Directory to Binary Location
 > cd /usr/local/bin/
 
-Step5: Make Executable Permission to 'geckodriver'
+- Step5: Make Executable Permission to 'geckodriver'
 > sudo chmod +x geckodriver
 
-Step6: Add path
+- Step6: Add path
 > /usr/local/bin/geckodriver
 
-Step6: Open bashrc
+- Step6: Open bashrc
 > nano ~/.bashrc
 
-Step7: Load bashrc
+- Step7: Load bashrc
 > source ~/.bashrc
 
 ### Install git
 
 > sudo apt install git -y
 > sudo apt-get install git -y
-> una vez instalado se puede ocupar "git clone URL", para bajar cualquier repositorio
+- una vez instalado se puede ocupar "git clone URL", para bajar cualquier repositorio
 
 #### Para instalar en servidor
 
 https://namespaceit.com/blog/remote-support-for-password-authentication-was-removed-on-august-13-2021-please-use-a-personal-access-token-instead
 
-git config --global user.name matiassea
+> git config --global user.name matiassea
 
-git config --global user.email matiassea@hotmail.com
+> git config --global user.email matiassea@hotmail.com
 
-git config -l
+> git config -l
 
 ### Clonar una rama en especifico
 
-git clone https://github.com/matiassea/Servidor_RPA.git
+- Para clonar una rama
+> git clone https://github.com/matiassea/Servidor_RPA.git
 
-git clone --branch branchname remote-repo-url
+- Para clonar una rama en especificos
+> git clone --branch branchname remote-repo-url
 
-Username for 'https://github.com' : matiassea
+> Username for 'https://github.com' : matiassea
 
-Password for 'https://github.com' : <token>
+> Password for 'https://github.com' : <token>
 
 ## NodeJS
 
