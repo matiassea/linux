@@ -7,6 +7,30 @@ Comandos generales de Linux
 > sudo apt upgrade
 > sudo apt update && sudo apt upgrade -y
 
+### para borrar archivos
+Para remover la carpeta completa
+> rm -rf {dir-name}
+
+### Para copiar
+- The basic form of this command takes an input source (or sources) that you want to copy (files or directories) and a destination to copy the files or directories to:
+
+> cp [OPTIONS] source_file target_file
+
+- How to copy a file to the current directory
+> cp a.txt b.txt
+
+- How to copy a file to another directory
+> cp a.txt ../directory-1/
+
+- How to copy multiple files to a directory
+> cp first.txt second.txt ../directory-1/
+
+- How to copy a directory to another directory
+> cp -r directory-1 directory-2
+
+- para prevenir overwritting, se agrega -i
+> cp -i a.txt directory-1/a.txt
+
 ## Instalar Nano
 sudo apt-get -y install nano
 
@@ -21,14 +45,20 @@ sudo apt-get -y install nano
 > ctrl + w 
 
 - Para salir
-> ctrl + x 
+> ctrl + x
+
+-para cortar
+> ctrl + k 
+
+-para pegar
+> ctrl + u 
 
 > alt + a y flechas para marcar texto, desmarcar alt + a
 
-- Copiar 
+- Copiar en consola
 > crtl + shift + c 
 
-- Pegar 
+- Pegar  en consola
 > crtl + shift + v
 
 ### Uso de Nano Bash
