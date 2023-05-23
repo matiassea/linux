@@ -173,16 +173,19 @@ https://namespaceit.com/blog/remote-support-for-password-authentication-was-remo
 > git config -l
 
 ### Clonar una rama en especifico
+- el usuario es matiassea. El password debe asegurarse que este activo en la pagina de Github Actualizar el token clasic en Settings -> Developer Settings -> Personal access tokens
 
 - Para clonar una rama
 > git clone https://github.com/matiassea/Servidor_RPA.git
 
 - Para clonar una rama en especificos
 > git clone --branch branchname remote-repo-url
+- ejemplo
+> git clone --branch V22052023 https://github.com/matiassea/Servidor_RPA.git”
 
 > Username for 'https://github.com' : matiassea
 
-> Password for 'https://github.com' : <token>
+> Password for 'https://github.com' : <Settings -> Developer Settings -> Personal access tokens -> Tokens (Classic) -> Generate new Token>
 
 ## NodeJS
 
