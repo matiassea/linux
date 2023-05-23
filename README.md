@@ -105,6 +105,11 @@ export PATH=[/home/dave/work]:$PATH
 > source ~/.bash_aliases
 
 ## Programas
+### Revision del puerto
+> lsof -i tcp:3000 => para ver quien bloquea el puerto
+> sudo kill -9 (lsof -i tcp:3000 -t) => para cerrar el proceso en el puerto 3000
+
+
 
 ### Instalar screenfetch
 > sudo apt-get install screenfetch
