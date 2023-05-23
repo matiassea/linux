@@ -228,6 +228,25 @@ pm2 ls => procesos que estan en ejecucion
 
 pm2 startup => Para iniciarse (se copia y pega el comando que sugiere este comando)
 
+pm2 start project-1/index.js
+
+pm2 list = pm2 ls
+
+pm2 restart project-1/index.js --watch
+
+pm2 restart pid --watch
+
+pm2 stop ruta/pid/id
+
+### Logs
+
+pm2 flush              # Empty all log files
+
+pm2 logs [--raw]       # Display all processes logs in streaming
+
+pm2 start ecosystem.config.js
+ 
+ 
 ## AWS
 
 ssh -i "Server V26092022.pem" admin@ec2-3-142-225-147.us-east-2.compute.amazonaws.com
