@@ -11,10 +11,20 @@ Comandos generales de Linux
 Para remover la carpeta completa
 > rm -rf {dir-name}
 
+### Control de procesos
+> ps aux | grep admin -> Para ver los procesos que esta corriendo el administrador
+> pkill firefox-esr -> matar todos los procesos que tengan el nombre "firefox-esr"
+> free -h
+
+### Control de puertos
+> sudo apt-get install lsof
+
 ### Para copiar
 - The basic form of this command takes an input source (or sources) that you want to copy (files or directories) and a destination to copy the files or directories to:
 
 > cp [OPTIONS] source_file target_file
+
+> cp -i /home/admin/test/Servidor_RPA/routes/usuarios.js  /home/admin/Servidor_RPA/routes/usuarios.js
 
 - How to copy a file to the current directory
 > cp a.txt b.txt
@@ -166,6 +176,15 @@ export PATH=[/home/dave/work]:$PATH
 > sudo apt install git -y
 > sudo apt-get install git -y
 - una vez instalado se puede ocupar "git clone URL", para bajar cualquier repositorio
+
+### Clonar en GitHub.
+
+- Colocar el siguiente URL 
+> git clone --branch V22052023 https://github.com/matiassea/Servidor_RPA.git
+> User = matiassea
+> Passsword = **********
+- Obtener el password desde el token clasic en Settings -> Developer Settings -> Personal access tokens
+
 
 #### Para instalar en servidor
 
