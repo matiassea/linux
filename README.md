@@ -275,6 +275,9 @@ pm2 start ecosystem.config.js
 
 ssh -i "Server V26092022.pem" admin@ec2-3-142-225-147.us-east-2.compute.amazonaws.com
 
+admin@ec2-18-217-57-98.us-east-2.compute.amazonaws.com
+key => ServerV26092022
+
 
 ## Python
 
