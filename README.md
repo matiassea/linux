@@ -275,8 +275,9 @@ pm2 start ecosystem.config.js
 
 ssh -i "Server V26092022.pem" admin@ec2-3-142-225-147.us-east-2.compute.amazonaws.com
 
-admin@ec2-18-217-57-98.us-east-2.compute.amazonaws.com
-key => ServerV26092022
+Host name (or IP address) => admin@ec2-18-217-57-98.us-east-2.compute.amazonaws.com
+SSH => Auth => Private key file for authentication => ServerV26092022
+Connection => Second between keeplives => 180
 
 
 ## Python
