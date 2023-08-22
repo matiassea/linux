@@ -132,14 +132,17 @@ export PATH=[/home/dave/work]:$PATH
 ### Install Python
 
 > sudo apt-get install python3
+
 > sudo apt-get install python3-pip -y
+
 > pip install --upgrade pip
+
 > pip install --upgrade virtualenv
 
 ### Instalacion de Firefox
 
 - Step1 : Download Firefox
-> sudo apt-get install firefox-esr
+> sudo apt-get install firefox-esr -y
 
 ### Instalacion de Gecko Driver
 > https://github.com/mozilla/geckodriver/releases
@@ -171,6 +174,7 @@ export PATH=[/home/dave/work]:$PATH
 ### Install git
 
 > sudo apt install git -y
+
 > sudo apt-get install git -y
 - una vez instalado se puede ocupar "git clone URL", para bajar cualquier repositorio
 
