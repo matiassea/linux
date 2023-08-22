@@ -3,8 +3,11 @@ Comandos generales de Linux
 
 ### Actualizacion del sistema operativo
 > sudo apt update
+ 
 > sudo apt full-upgrade
+
 > sudo apt upgrade
+
 > sudo apt update && sudo apt upgrade -y
 
 ### para borrar archivos
