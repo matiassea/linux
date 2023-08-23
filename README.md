@@ -113,7 +113,9 @@ export PATH=[/home/dave/work]:$PATH
 
 ## Programas
 ### Revision del puerto
+
 > lsof -i tcp:3000 => para ver quien bloquea el puerto
+
 > sudo kill -9 (lsof -i tcp:3000 -t) => para cerrar el proceso en el puerto 3000
 
 
@@ -125,8 +127,11 @@ export PATH=[/home/dave/work]:$PATH
 ### Mediciones de rendimiento
 
 > free -h
+
 > df -h
+
 > systemd-analyze
+
 > systemd-analyze blame | head
 
 ### Install Python
@@ -135,9 +140,18 @@ export PATH=[/home/dave/work]:$PATH
 
 > sudo apt-get install python3-pip -y
 
+
+#### PEP 668
+
+> sudo apt install python3.11-venv
+
+> source .venv/bin/activate
+
 > pip install --upgrade pip
 
 > pip install --upgrade virtualenv
+
+> deactivate 
 
 ### Instalacion de Firefox
 
@@ -176,7 +190,10 @@ export PATH=[/home/dave/work]:$PATH
 > sudo apt install git -y
 
 > sudo apt-get install git -y
+
 - una vez instalado se puede ocupar "git clone URL", para bajar cualquier repositorio
+
+> git --version
 
 ### Clonar en GitHub.
 
@@ -340,6 +357,114 @@ pip install -r requirements.txt
 Variables de entorno de Virtualenv y Impresion_OC
 
 se cambia el path para adjuntar archivos en el envio de email
+
+
+
+# Configuracion de instancia en EC2
+
+### Configuracion Putty
+
+> Abrir Putty Key Generator 
+
+> Apretar Load
+
+> Seleccionar la llave
+
+> Apretar “Save private key”
+
+> En "Seccion" -> Host name (or IP Address) colocar "admin@ “Public IPV4 DNS” (ideal que tenga la elastic IP address creada para evitar el cambio del public)
+
+> En "Connection" -> SSH -> Auth -> Credentials > "Private key file for authentication" -> Adjuntar la llave
+
+> En "Connection" -> "Seconds between keepalives 180
+
+> En "Seccion" -> Save las configuraciones
+
+
+### Comienzo instalacion instancia
+
+> sudo apt update && sudo apt full-upgrade && sudo apt upgrade && sudo apt update && sudo apt upgrade -y
+
+### Nano
+
+> sudo apt-get -y install nano
+
+### lsof
+
+> sudo apt-get install lsof
+
+### Python
+
+> sudo apt install python3
+
+> sudo apt install python3-pip -y
+
+> python3 -m venv .venv
+
+> source .venv/bin/activate
+
+> pip install --upgrade pip
+
+> pip3 –version
+
+> pip install --upgrade virtualenv
+
+### Firefox
+
+> sudo apt-get install firefox-esr -y
+
+> wget https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz
+
+> sudo tar -xvf geckodriver-v0.30.0-linux64.tar.gz
+
+> sudo mv geckodriver /usr/local/bin/
+
+> cd /usr/local/bin/
+
+> sudo chmod +x geckodriver
+
+### Github
+
+> sudo apt install git -y
+
+> sudo apt-get install git -y
+
+> sudo apt-get update && sudo apt-get upgrade
+
+### NodeJS
+
+> curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+> source ~/.bashrc
+
+> nvm list-remote
+
+> v12.22.12
+
+> nvm install v12.22.12 
+
+> nvm list
+
+> sudo apt install npm
+
+> npm -v
+
+### PM2
+
+> sudo apt-get update && sudo apt-get upgrade
+
+> sudo npm install pm2 -g
+
+> sudo npm install uuid@latest
+
+
+
+
+
+
+
+
+
 
 
 
