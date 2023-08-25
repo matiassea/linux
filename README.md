@@ -485,6 +485,29 @@ se cambia el path para adjuntar archivos en el envio de email
 
 > sudo npm install uuid@latest
 
+### Configuracion de alias
+
+alias op = "cd .."
+
+alias lñ = "ls -la"
+
+alias up = "sudo apt update && sudo apt upgrade -y"
+
+alias sql = "mysql -u root -punterricht83"
+
+alias go = "pm2 start ecosystem.config.js"
+
+alias look = "pm2 logs"
+
+alias look2= "pm2 logs --lines 500"
+
+alias look3= "pm2 logs --lines 1000"
+
+alias lookcl = "pm2 flush"
+
+alias stop = "pm2 stop 0"
+
+alias occlean= "rm /home/admin/FinalizacionCancelacion/oc/*"
 
 
 
