@@ -385,6 +385,34 @@ se cambia el path para adjuntar archivos en el envio de email
 
 > sudo apt update && sudo apt full-upgrade && sudo apt upgrade && sudo apt update && sudo apt upgrade -y
 
+### Curl
+
+> sudo apt install wget
+
+### MySQL
+
+> wget https://dev.mysql.com/get/mysql-apt-config_0.8.26-1_all.deb (el link obtenido desde "No thanks, just start my download."
+
+> sudo dpkg -i mysql-apt-config_0.8.26-1_all.deb
+
+> sudo apt update
+
+> sudo apt-get update
+
+> sudo apt-get install mysql-server
+
+> se agrega la contraseña (unt....83)
+
+> sudo apt update
+
+> sudo apt-get update
+
+> Checkeando el status -> sudo service mysql status -> debe decir "Active: active (running)"
+
+> sudo systemctl is-enabled mysql
+
+> sudo mysql -u root -punterricht83
+
 ### Nano
 
 > sudo apt-get -y install nano
