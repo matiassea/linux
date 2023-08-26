@@ -197,12 +197,17 @@ export PATH=[/home/dave/work]:$PATH
 
 ### Clonar en GitHub.
 
-- Colocar el siguiente URL 
+- Colocar el siguiente URL
+  
 > git clone --branch V22052023 https://github.com/matiassea/Servidor_RPA.git
-> User = matiassea
-> Passsword = **********
-- Obtener el password desde el token clasic en Settings -> Developer Settings -> Personal access tokens
 
+> User = matiassea
+
+> Passsword = ********** (Personal access tokens (classic))
+
+> Obtener el password desde el token clasic en Settings -> Developer Settings -> Personal access tokens (Personal access tokens (classic))
+
+> Al momento de crear el token se deben marcar todas las opciones para que permita bajar el proyecto 
 
 #### Para instalar en servidor
 
