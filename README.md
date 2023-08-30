@@ -422,6 +422,28 @@ se cambia el path para adjuntar archivos en el envio de email
 
 > sudo apt-get -y install nano
 
+> configurar nano nano ~/.nanorc
+
+> set linenumbers
+
+> set constantshow
+
+> set const
+
+> set autoindent
+
+> set mouse
+
+> set smooth
+
+> set softwrap
+
+> set tabsize 4
+
+> man nanorc
+
+
+
 ### lsof
 
 > sudo apt-get install lsof
