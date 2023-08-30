@@ -442,6 +442,8 @@ se cambia el path para adjuntar archivos en el envio de email
 
 > man nanorc
 
+> para ver mas configuraciones sudo nano /etc/nanorc 
+
 
 
 ### lsof
