@@ -482,6 +482,8 @@ se cambia el path para adjuntar archivos en el envio de email
 
 > npm -v
 
+> Una vez clonado el codigo y bajado al servidor ejecutar npm i, para instalar los modulos para la ejecucion 
+
 ### PM2
 
 > sudo apt-get update && sudo apt-get upgrade
