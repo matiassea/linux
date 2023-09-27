@@ -394,6 +394,12 @@ se cambia el path para adjuntar archivos en el envio de email
 
 > sudo apt install wget
 
+### install gnupg
+
+https://levelup.gitconnected.com/how-to-install-gnupg-on-debian-11-2fcae38bc257
+
+> sudo apt-get -y install gnupg
+
 ### MySQL
 
 > wget https://dev.mysql.com/get/mysql-apt-config_0.8.26-1_all.deb (el link obtenido desde "No thanks, just start my download."
@@ -404,25 +410,27 @@ se cambia el path para adjuntar archivos en el envio de email
 
 > sudo apt-get update
 
-> sudo apt-get install mysql-server
+> wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb
 
-> se agrega la contraseña (unt....83)
+> sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb -> debido a error de libssl1.1
 
-> sudo apt update
+> sudo apt install mysql-server
 
-> sudo apt-get update
+> se agrega la contraseña (unt....83) y elegir contraseña recomendada
+
+> sudo apt update && sudo apt-get update
 
 > Checkeando el status -> sudo service mysql status -> debe decir "Active: active (running)"
 
 > sudo systemctl is-enabled mysql
 
-> sudo mysql -u root -punterricht83
+> sudo mysql -u root -punterricht83 -> Para ingresar a SQL
 
 ### Nano
 
 > sudo apt-get -y install nano
 
-> configurar nano nano ~/.nanorc
+> configurar nano -> nano ~/.nanorc
 
 > set linenumbers
 
@@ -444,8 +452,6 @@ se cambia el path para adjuntar archivos en el envio de email
 
 > para ver mas configuraciones sudo nano /etc/nanorc 
 
-
-
 ### lsof
 
 > sudo apt-get install lsof
@@ -458,6 +464,8 @@ se cambia el path para adjuntar archivos en el envio de email
 
 > python3 -m venv .venv
 
+> sudo apt install python3.11-venv
+
 > source .venv/bin/activate
 
 > pip install --upgrade pip
@@ -465,6 +473,16 @@ se cambia el path para adjuntar archivos en el envio de email
 > pip3 –version
 
 > pip install --upgrade virtualenv
+
+> #### Virtualenv
+
+> python3 -m venv Servidor_RPA/robots/.venv
+
+> source Servidor_RPA/robots/.venv/bin/activate
+
+> python3 -m pip install virtualenv
+
+> python3 -m pip install -r requirements.txt (eliminar Pyinstaller del requirements.txt)
 
 ### Firefox
 
@@ -517,6 +535,12 @@ se cambia el path para adjuntar archivos en el envio de email
 > sudo npm install uuid@latest
 
 ### Configuracion de alias
+
+- Modificar el bash aliases
+> sudo nano ~/.bash_aliases
+
+- Cargar el nuevo bash aliases
+> source ~/.bash_aliases
 
 alias op="cd .."
 
