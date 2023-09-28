@@ -462,9 +462,9 @@ https://levelup.gitconnected.com/how-to-install-gnupg-on-debian-11-2fcae38bc257
 
 > sudo apt install python3-pip -y
 
-> python3 -m venv .venv
+> sudo apt install python3.11-venv -y
 
-> sudo apt install python3.11-venv
+> #### Instalacion de virtualenv especifico 
 
 > source .venv/bin/activate
 
