@@ -464,7 +464,7 @@ https://levelup.gitconnected.com/how-to-install-gnupg-on-debian-11-2fcae38bc257
 
 > sudo apt install python3.11-venv -y
 
-> #### Instalacion de virtualenv especifico 
+#### Instalacion de virtualenv especifico 
 
 > python3 -m venv Servidor_RPA/robots/.venv
 
@@ -482,15 +482,6 @@ https://levelup.gitconnected.com/how-to-install-gnupg-on-debian-11-2fcae38bc257
 
 > pip install --upgrade virtualenv
 
-> #### Virtualenv
-
-> python3 -m venv Servidor_RPA/robots/.venv
-
-> source Servidor_RPA/robots/.venv/bin/activate
-
-> python3 -m pip install virtualenv
-
-> python3 -m pip install -r requirements.txt (eliminar Pyinstaller del requirements.txt)
 
 ### Firefox
 
