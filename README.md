@@ -466,7 +466,15 @@ https://levelup.gitconnected.com/how-to-install-gnupg-on-debian-11-2fcae38bc257
 
 > #### Instalacion de virtualenv especifico 
 
-> source .venv/bin/activate
+> python3 -m venv Servidor_RPA/robots/.venv
+
+> source Servidor_RPA/robots/.venv/bin/activate
+
+> python3 -m pip install virtualenv
+
+> nano Servidor_RPA/robots/requirements.txt
+
+> python3 -m pip install -r Servidor_RPA/robots/requirements.txt (eliminar Pyinstaller del requirements.txt)
 
 > pip install --upgrade pip
 
