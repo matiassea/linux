@@ -24,14 +24,24 @@ Para remover la carpeta completa
 
 > ip addr show
 
+> The Ping test helps to identify the quality of the Internet Connection. The more packages are received and less time was spent for packages to reach its destination, the better the internet connection. More packages lost during the request means the poorer connection.
+
 ### Mantencion de temporales
+
 > sudo find /tmp -ctime +2000 -exec rm -rf {} +
 
 > sudo find /tmp -type f -mtime +2000 -exec rm -f {} \;
 
 > sudo find /var/tmp -type f -mtime +2000 -exec rm -f {} \;
 
-> Borrar Cache => rm -rf /home/admin/.cache/* 
+> Borrar Cache => rm -rf /home/admin/.cache/*
+
+
+### Control de procesos
+
+> top
+
+> sudo kill -9 XXX XXX
 
 
 ### Control de puertos
@@ -465,6 +475,17 @@ set tabsize 4
 > man nanorc
 
 > para ver mas configuraciones sudo nano /etc/nanorc 
+
+#### Funcionalidades
+
+> Set the target by moving the cursor to the beginning of the text and pressing CTRL + 6.
+
+> Now highlight the text you want to copy using the arrow keys.
+
+> ALT + 6 to copy. 
+
+> CTRL + U to paste
+
 
 ### lsof
 
