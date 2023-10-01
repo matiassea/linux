@@ -9,19 +9,28 @@ Para remover la carpeta completa
 > rm -rf {dir-name}
 
 ### Control de procesos
+
 > ps aux | grep admin -> Para ver los procesos que esta corriendo el administrador
+
 > pkill firefox-esr -> matar todos los procesos que tengan el nombre "firefox-esr"
+
 > free -h
 
 ### Para medir la calidad de la conexion
+
 > ping -c 3 google.com
-> ping 8.8.8.8 
+
+> ping 8.8.8.8
+
 > ip addr show
 
 ### Mantencion de temporales
 > sudo find /tmp -ctime +2000 -exec rm -rf {} +
+
 > sudo find /tmp -type f -mtime +2000 -exec rm -f {} \;
-> sudo find /var/tmp -type f -mtime +2000 -exec rm -f {} \; 
+
+> sudo find /var/tmp -type f -mtime +2000 -exec rm -f {} \;
+
 > Borrar Cache => rm -rf /home/admin/.cache/* 
 
 
