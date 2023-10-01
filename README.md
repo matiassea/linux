@@ -13,6 +13,18 @@ Para remover la carpeta completa
 > pkill firefox-esr -> matar todos los procesos que tengan el nombre "firefox-esr"
 > free -h
 
+### Para medir la calidad de la conexion
+> ping -c 3 google.com
+> ping 8.8.8.8 
+> ip addr show
+
+### Mantencion de temporales
+> sudo find /tmp -ctime +2000 -exec rm -rf {} +
+> sudo find /tmp -type f -mtime +2000 -exec rm -f {} \;
+> sudo find /var/tmp -type f -mtime +2000 -exec rm -f {} \; 
+> Borrar Cache => rm -rf /home/admin/.cache/* 
+
+
 ### Control de puertos
 > sudo apt-get install lsof
 
@@ -333,13 +345,15 @@ pip install -r requirements.txt
 
 ### Clonar una rama en especifico
 
-git clone https://github.com/matiassea/Servidor_RPA.git
+> git clone https://github.com/matiassea/Servidor_RPA.git
 
-git clone --branch <branchName> <remote-repo-url>
+> git clone --branch <branchName> <remote-repo-url>
 
-Username for 'https://github.com' : matiassea
+> Username for 'https://github.com' : matiassea
 
- Password for 'https://github.com' : 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
+> Password for 'https://github.com' : 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
+ 
+> npm i
  
 ### Instalar las librerias para Node
  
@@ -408,8 +422,6 @@ https://levelup.gitconnected.com/how-to-install-gnupg-on-debian-11-2fcae38bc257
 
 > sudo apt update
 
-> sudo apt-get update
-
 > wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb
 
 > sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb -> debido a error de libssl1.1
@@ -418,7 +430,7 @@ https://levelup.gitconnected.com/how-to-install-gnupg-on-debian-11-2fcae38bc257
 
 > se agrega la contraseña (unt....83) y elegir contraseña recomendada
 
-> sudo apt update && sudo apt-get update
+> sudo apt update
 
 > Checkeando el status -> sudo service mysql status -> debe decir "Active: active (running)"
 
@@ -432,21 +444,14 @@ https://levelup.gitconnected.com/how-to-install-gnupg-on-debian-11-2fcae38bc257
 
 > configurar nano -> nano ~/.nanorc
 
-> set linenumbers
-
-> set constantshow
-
-> set const
-
-> set autoindent
-
-> set mouse
-
-> set smooth
-
-> set softwrap
-
-> set tabsize 4
+set linenumbers
+set constantshow
+set const
+set autoindent
+set mouse
+set smooth
+set softwrap
+set tabsize 4
 
 > man nanorc
 
@@ -462,7 +467,7 @@ https://levelup.gitconnected.com/how-to-install-gnupg-on-debian-11-2fcae38bc257
 
 > sudo apt install python3-pip -y
 
-> sudo apt install python3.11-venv -y
+> sudo apt-get install python3-venv -y 
 
 #### Instalacion de virtualenv especifico 
 
@@ -472,16 +477,11 @@ https://levelup.gitconnected.com/how-to-install-gnupg-on-debian-11-2fcae38bc257
 
 > python3 -m pip install virtualenv
 
-> nano Servidor_RPA/robots/requirements.txt
+> nano Servidor_RPA/robots/requirements.txt (eliminar Pyinstaller del requirements.txt)
 
-> python3 -m pip install -r Servidor_RPA/robots/requirements.txt (eliminar Pyinstaller del requirements.txt)
+> python3 -m pip install -r Servidor_RPA/robots/requirements.txt
 
-> pip install --upgrade pip
-
-> pip3 –version
-
-> pip install --upgrade virtualenv
-
+> pip install --upgrade pip virtualenv
 
 ### Firefox
 
@@ -503,9 +503,11 @@ https://levelup.gitconnected.com/how-to-install-gnupg-on-debian-11-2fcae38bc257
 
 > sudo apt-get install git -y
 
-> sudo apt-get update && sudo apt-get upgrade
+> sudo apt-get update -y && sudo apt-get upgrade -y
 
 ### NodeJS
+
+> sudo apt install curl -y
 
 > curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 
@@ -513,13 +515,11 @@ https://levelup.gitconnected.com/how-to-install-gnupg-on-debian-11-2fcae38bc257
 
 > nvm list-remote
 
-> v12.22.12
-
-> nvm install v12.22.12 
+> nvm install v12.22.12 se cambia a V14.21.3 debido a que PM2 lo solicita
 
 > nvm list
 
-> sudo apt install npm
+> sudo apt install npm -y
 
 > npm -v
 
@@ -527,7 +527,7 @@ https://levelup.gitconnected.com/how-to-install-gnupg-on-debian-11-2fcae38bc257
 
 ### PM2
 
-> sudo apt-get update && sudo apt-get upgrade
+> sudo apt-get update -y && sudo apt-get upgrade -y
 
 > sudo npm install pm2 -g
 
@@ -535,13 +535,11 @@ https://levelup.gitconnected.com/how-to-install-gnupg-on-debian-11-2fcae38bc257
 
 ### Configuracion de alias
 
-- Modificar el bash aliases
-> sudo nano ~/.bash_aliases
+> sudo nano ~/.bash_aliases -> Modificar el bash aliases
 
-- Cargar el nuevo bash aliases
-> source ~/.bash_aliases
+> source ~/.bash_aliases -> Cargar el nuevo bash aliases
 
-alias op="cd .."
+alias ..="cd .."
 
 alias lñ="ls -la"
 
@@ -565,11 +563,16 @@ alias occlean="rm /home/admin/FinalizacionCancelacion/oc/*"
 
 
 
+########################################################################################################################
 
-
-
-
-
+###  Entorno grafico LXDE
+> sudo apt update
+> sudo apt install lxde task-lxde-desktop -y
+> sudo apt-get -y install gdm3
+> seleccionar gdm3
+> sudo dpkg-reconfigure gdm3
+> sudo apt-get install xrdp
+> sudo passwd admin => unterricht83
 
 
 
