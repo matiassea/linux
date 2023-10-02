@@ -555,7 +555,7 @@ set matchbrackets "(<[{)>]}"
 
 > nvm list-remote
 
-> nvm install v12.22.12 se cambia a V14.21.3 debido a que PM2 lo solicita
+> nvm install v12.22.12 se cambia a v14.21.3 debido a que PM2 lo solicita
 
 > nvm list
 
@@ -568,6 +568,8 @@ set matchbrackets "(<[{)>]}"
 ### PM2
 
 > sudo apt-get update -y && sudo apt-get upgrade -y
+
+> apt-get update -y && apt-get upgrade -y
 
 > sudo npm install pm2 -g
 
