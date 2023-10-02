@@ -464,13 +464,23 @@ https://levelup.gitconnected.com/how-to-install-gnupg-on-debian-11-2fcae38bc257
 > configurar nano -> nano ~/.nanorc
 
 set linenumbers
+
 set constantshow
+
 set const
+
 set autoindent
+
 set mouse
+
 set smooth
+
 set softwrap
+
 set tabsize 4
+
+set matchbrackets "(<[{)>]}"
+
 
 > man nanorc
 
