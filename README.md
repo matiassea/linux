@@ -142,6 +142,14 @@ export PATH=[/home/dave/work]:$PATH
 - Cargar el nuevo bash aliases
 > source ~/.bash_aliases
 
+- Si no carga el bash aliases se debe colocar el siguiente script en source ~/.bashrc
+
+if [ -f $HOME/.bash_aliases ] then
+. $HOME/.bash_aliases
+fi
+
+
+
 ## Programas
 ### Revision del puerto
 
