@@ -28,11 +28,13 @@ Para remover la carpeta completa
 
 ### Mantencion de temporales
 
-> sudo find /tmp -ctime +2000 -exec rm -rf {} +
+> 'sudo du -ahx / | sort -rh | head -n 20
 
-> sudo find /tmp -type f -mtime +2000 -exec rm -f {} \;
+> 'sudo find /tmp -ctime +2000 -exec rm -rf {} +
 
-> sudo find /var/tmp -type f -mtime +2000 -exec rm -f {} \;
+> 'sudo find /tmp -type f -mtime +2000 -exec rm -f {} \;
+
+> 'sudo find /var/tmp -type f -mtime +2000 -exec rm -f {} \;
 
 > Borrar Cache => rm -rf /home/admin/.cache/*
 
