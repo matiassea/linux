@@ -30,6 +30,8 @@ Para remover la carpeta completa
 ```
 sudo du -ahx / | sort -rh | head -n 20
 
+sudo find /tmp -exec rm -rf {} +
+
 sudo find /tmp -ctime +2000 -exec rm -rf {} +
 
 sudo find /tmp -type f -mtime +2000 -exec rm -f {} \;
@@ -37,6 +39,27 @@ sudo find /tmp -type f -mtime +2000 -exec rm -f {} \;
 sudo find /var/tmp -type f -mtime +2000 -exec rm -f {} \;
 
 Borrar Cache => rm -rf /home/admin/.cache/*
+
+
+Step 1: Open the terminal on your PC and run the command below to create an empty shell script
+
+sudo vi clear_temp.sh
+
+Step 2: Now, add the following lines to it
+
+#!/bin/sh
+
+sudo find /tmp -type f -delete
+
+Step 3: Now, save the file and close it. Run the command below to make it executable.
+
+sudo chmod +x clear_temp.sh 
+
+That’s all you have to do; now you can run this shell script to clear the temp folder whenever you want. 
+
+./clear_temp.sh
+
+
 ```
 
 ### Control de procesos
