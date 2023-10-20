@@ -40,6 +40,8 @@ sudo find /var/tmp -type f -mtime +2000 -exec rm -f {} \;
 
 Borrar Cache => rm -rf /home/admin/.cache/*
 
+Cerrar todos los procesos de Firefox => pkill -f firefox
+
 
 Step 1: Open the terminal on your PC and run the command below to create an empty shell script
 
