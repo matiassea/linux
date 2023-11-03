@@ -40,6 +40,8 @@ sudo find /var/tmp -type f -mtime +2000 -exec rm -f {} \;
 
 Borrar Cache => rm -rf /home/admin/.cache/*
 
+Limpiar => find /tmp -type f -delete
+
 Cerrar todos los procesos de Firefox => pkill -f firefox
 
 
