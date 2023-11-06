@@ -172,11 +172,13 @@ export PATH=[/home/dave/work]:$PATH
 > source ~/.bash_aliases
 
 - Si no carga el bash aliases se debe colocar el siguiente script en source ~/.bashrc
-
+nano ~/.bashrc
+source ~/.bashrc
+```
 if [ -f $HOME/.bash_aliases ] then
 . $HOME/.bash_aliases
 fi
-
+```
 
 
 ## Programas
