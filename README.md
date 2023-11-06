@@ -24,6 +24,8 @@ Para remover la carpeta completa
 
 > ip addr show
 
+> curl ifconfig.me
+
 > The Ping test helps to identify the quality of the Internet Connection. The more packages are received and less time was spent for packages to reach its destination, the better the internet connection. More packages lost during the request means the poorer connection.
 
 ### Mantencion de temporales
