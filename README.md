@@ -316,7 +316,7 @@ source ~/.bashrc
 
 nvm list-remote
 
-nvm install v<N° version> v12.22.12
+nvm install v<N° version> v14.21.3
 
 nvm list
 
