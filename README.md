@@ -439,7 +439,7 @@ se cambia el path para adjuntar archivos en el envio de email
 
 
 
-# Configuracion de instancia en EC2
+# Configuracion de Cloudserver
 
 ### Configuracion Putty
 
