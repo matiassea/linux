@@ -37,10 +37,10 @@ Limpiar => find /tmp -type f -delete
 
 Cerrar todos los procesos de Firefox => pkill -f firefox
 
-Resetear => Reboot
+Resetear => reboot
 
 ```
-
+#### Codigo de mantencion en revision
 ```
 sudo du -ahx / | sort -rh | head -n 20
 
