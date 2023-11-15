@@ -39,6 +39,8 @@ Cerrar todos los procesos de Firefox => pkill -f firefox
 
 Resetear => reboot
 
+rm -rf /home/admin/.cache/* | find /tmp -type f -delete | pkill -f firefox  |  lookcl  |  occlean
+
 ```
 #### Codigo de mantencion en revision
 ```
