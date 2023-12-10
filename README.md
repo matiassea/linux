@@ -265,7 +265,7 @@ fi
 > source ~/.bashrc
 
 ### Install git
-
+  
 > sudo apt install git -y
 
 > sudo apt-get install git -y
@@ -288,7 +288,7 @@ fi
 
 > Al momento de crear el token se deben marcar todas las opciones para que permita bajar el proyecto 
 
-#### Para instalar en servidor
+#### Para instalar en servidor (no es necesario en VPC)
 
 https://namespaceit.com/blog/remote-support-for-password-authentication-was-removed-on-august-13-2021-please-use-a-personal-access-token-instead
 
@@ -408,7 +408,7 @@ Para desactivar => deactivate
 pip install -r requirements.txt
 
 
-# Levantamiento de servidor en EC2
+# Levantamiento de servidor de codigo para robot
 
 ### Clonar una rama en especifico
 
@@ -420,31 +420,40 @@ pip install -r requirements.txt
 
 > Password for 'https://github.com' : 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
  
-> npm i
- 
-### Instalar las librerias para Node
- 
-ejecutar "npm install" en la carpeta del servidor, aparecera la carpeta node_modules
+> ejecutar "npm install" en la carpeta del servidor, aparecera la carpeta node_modules => npm i
 
-### Virtualenv
+### Virtualenv en VPC
 
-Para crear => virtualenv <virtualenv_name> => virtualenv env
+> sudo apt install python3.11-venv
 
-Para activar => source <virtualenv_name>/bin/activate => source env/bin/activate
+> pip install --upgrade pip
 
-Para desactivar => deactivate
+> pip install --upgrade virtualenv
 
-### Para instalar librerias segun archivo de configuracion
+> Para crear => virtualenv <virtualenv_name> => virtualenv env
 
-pip install -r requirements.txt 
- 
+> Para activar => source <virtualenv_name>/bin/activate => source env/bin/activate
+
+> Para instalar librerias segun archivo de configuracion => pip install -r requirements.txt 
+
+> Para desactivar => deactivate
+
+> nano Servidor_RPA/robots/requirements.txt (eliminar Pyinstaller del requirements.txt)
+
+> python3 -m pip install -r Servidor_RPA/robots/requirements.txt
+
+> pip install --upgrade pip virtualenv
+
+
 ### Revisar .env
  
 Variables de entorno de Virtualenv y Impresion_OC
 
+Se modifica el archivo /robots/.env modificando la ruta a Python y la ruta al robot.
+/home/recepcionesPsoft/robots
+/home/recepcionesPsoft/robots/env/bin
+
 se cambia el path para adjuntar archivos en el envio de email
-
-
 
 # Configuracion de Cloudserver
 
@@ -469,11 +478,13 @@ se cambia el path para adjuntar archivos en el envio de email
 
 ### Comienzo instalacion instancia
 
-> sudo apt update && sudo apt full-upgrade && sudo apt upgrade && sudo apt update && sudo apt upgrade -y
+### Actualizar
+
+> sudo apt update -y && sudo apt full-upgrade -y && sudo apt upgrade -y && sudo apt update -y && sudo apt upgrade -y
 
 ### Curl
 
-> sudo apt install wget
+> sudo apt install wget -y
 
 ### install gnupg
 
@@ -493,7 +504,7 @@ https://levelup.gitconnected.com/how-to-install-gnupg-on-debian-11-2fcae38bc257
 
 > sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb -> debido a error de libssl1.1
 
-> sudo apt install mysql-server
+> sudo apt install mysql-server -y
 
 > se agrega la contraseña (unt....83) y elegir contraseña recomendada
 
@@ -501,7 +512,7 @@ https://levelup.gitconnected.com/how-to-install-gnupg-on-debian-11-2fcae38bc257
 
 > Checkeando el status -> sudo service mysql status -> debe decir "Active: active (running)"
 
-> sudo systemctl is-enabled mysql
+> sudo systemctl is-enabled mysql -> Debe decir "enabled"
 
 > sudo mysql -u root -punterricht83 -> Para ingresar a SQL
 
@@ -509,7 +520,7 @@ https://levelup.gitconnected.com/how-to-install-gnupg-on-debian-11-2fcae38bc257
 
 > sudo apt-get -y install nano
 
-> configurar nano -> nano ~/.nanorc
+ > configurar nano -> nano ~/.nanorc
 
 set linenumbers
 
@@ -529,6 +540,7 @@ set tabsize 4
 
 set matchbrackets "(<[{)>]}"
 
+set emptyline
 
 > man nanorc
 
@@ -547,7 +559,7 @@ set matchbrackets "(<[{)>]}"
 
 ### lsof
 
-> sudo apt-get install lsof
+> sudo apt-get install lsof -y
 
 ### Python
 
@@ -650,8 +662,6 @@ alias lookcl="pm2 flush"
 alias stop="pm2 stop 0"
 
 alias occlean="rm /home/admin/FinalizacionCancelacion/oc/*"
-
-
 
 ########################################################################################################################
 
