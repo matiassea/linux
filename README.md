@@ -184,7 +184,8 @@ export PATH=[/home/dave/work]:$PATH
 nano ~/.bashrc
 source ~/.bashrc
 ```
-if [ -f $HOME/.bash_aliases ] then
+if [ -f $HOME/.bash_aliases ]
+then
 . $HOME/.bash_aliases
 fi
 ```
