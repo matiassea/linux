@@ -72,7 +72,54 @@ That’s all you have to do; now you can run this shell script to clear the temp
 
 ./clear_temp.sh
 
+```
 
+
+#### Configuracion del CRON 
+```
+crontab -e => Aperturar el archivo de configuracion
+0 2 * * * /etc/cron.daily/limpieza.sh => Aperturar el archivo de configuracion. El archivo de configuracion debe comenzar con #!/bin/sh
+chmod +x /etc/cron.daily/limpieza.sh => Una vez creado el archivo de configuracion se debe dar los accesos necesarios
+chmod +x /home/Servidor_RPA/limpieza.sh => Una vez creado el archivo de configuracion se debe dar los accesos necesarios
+cd /etc/cron.daily/ => Archivo para limpieza diaria
+* * * * * /home/Servidor_RPA/limpieza.sh
+
+echo TEST CRON > /home/Servidor_RPA/limpieza2.sh
+echo "$PATH"
+#!/bin/sh
+/usr/bin/pm2 start home/Servidor_RPA/ecosystem.config.js
+/root/.pm2
+
+File Crontab
+30 3 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 start /home/Servidor_RPA/ecosystem.config.js
+30 3 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 stop 0
+30 3 * * * rm -rf /home/admin/.cache/*
+30 3 * * * find /tmp -type f -delete
+30 3 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 flush
+30 3 * * * rm oc/*
+30 3 * * * /sbin/shutdown -r
+30 3 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 start /home/Servidor_RPA/ecosystem.config.js
+30 3 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 logs
+
+which => para conocer el directorio raiz donde se encuentra el comando
+timedatectl => Para saber la hora local
+se ejecuta a la LocalTime (esta con -2 horas)
+systemctl status cron => Debe decir "active", confirmando que Cron este activo.
+```
+
+#### Revisar status del CRON
+
+```
+cat /var/log/syslog
+cat /var/log/cron
+tail -f /var/log/cron
+grep "my-script.sh"
+tail -f /var/log/cron
+
+Revisar status del CRON
+
+cd /var/log/
+cat /var/log/syslog
 ```
 
 ### Control de procesos
