@@ -75,36 +75,63 @@ That’s all you have to do; now you can run this shell script to clear the temp
 ```
 
 
-#### Configuracion del CRON 
+#### Configuracion del CRON para realizar mantencion automatica
 ```
 crontab -e => Aperturar el archivo de configuracion
+
 0 2 * * * /etc/cron.daily/limpieza.sh => Aperturar el archivo de configuracion. El archivo de configuracion debe comenzar con #!/bin/sh
+
+Para el caso de programar por medio de un archivo
 chmod +x /etc/cron.daily/limpieza.sh => Una vez creado el archivo de configuracion se debe dar los accesos necesarios
 chmod +x /home/Servidor_RPA/limpieza.sh => Una vez creado el archivo de configuracion se debe dar los accesos necesarios
 cd /etc/cron.daily/ => Archivo para limpieza diaria
 * * * * * /home/Servidor_RPA/limpieza.sh
+El archivo debe comenzar con #!/bin/sh
 
-echo TEST CRON > /home/Servidor_RPA/limpieza2.sh
 echo "$PATH"
-#!/bin/sh
-/usr/bin/pm2 start home/Servidor_RPA/ecosystem.config.js
-/root/.pm2
+echo "$PWD"
+echo "$SHELL"
 
-File Crontab
-30 3 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 start /home/Servidor_RPA/ecosystem.config.js
+Para configurar el archivo file Crontab
+PATH = echo "$PATH"
+PWD = echo "$PWD"
+SHELL = echo "$SHELL"
+
 30 3 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 stop 0
 30 3 * * * rm -rf /home/admin/.cache/*
 30 3 * * * find /tmp -type f -delete
-30 3 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 flush
 30 3 * * * rm oc/*
 30 3 * * * /sbin/shutdown -r
-30 3 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 start /home/Servidor_RPA/ecosystem.config.js
+30 3 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 start /home/Servidor_RPA/app.js -- --port 3000
+30 3 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 flush
 30 3 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 logs
 
-which => para conocer el directorio raiz donde se encuentra el comando
-timedatectl => Para saber la hora local
-se ejecuta a la LocalTime (esta con -2 horas)
+Verificar
+Para verificar el funcionamiento del crontab se debe revisar: pm2 status, look y free -h
+
+Consideracion importante
+la libreria .env no se despliega a nivel de password en el archivo db/db.js. Por lo que se recomienda que el password sea directo en el archivo db.js
+
+Comandos que ayudan a configurar el Crontab
+which => para conocer el directorio raiz donde se encuentra el comando (pm2, SQL)
+timedatectl => Para saber la hora local. Se ejecuta a la LocalTime (esta con -2 horas)
 systemctl status cron => Debe decir "active", confirmando que Cron este activo.
+
+Para ejecutar comandos de SQL en el Crontab
+
+codigo para ejecutar codigo de SQL
+/usr/bin/mysql --user=root --password=unterricht83 -e "/home/recepcionesPsoft/db/test.sql"
+
+codigo para ejecutar codigo de SQL
+/usr/bin/mysql --user=root --password=unterricht83 -e "exit"
+
+Para verificar el funcionamiento de Crontab
+systemctl status cron => debe decir "active"
+
+If not running configure the crond service to start automatically on boot:
+sudo systemctl enable cron.service
+sudo systemctl start cron.service
+
 ```
 
 #### Revisar status del CRON
