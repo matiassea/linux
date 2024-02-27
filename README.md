@@ -148,7 +148,23 @@ Revisar status del CRON
 cd /var/log/
 cat /var/log/syslog
 ```
+#### Aumentar la SWAP
+```
+https://wiki.crowncloud.net/?How_to_Add_Swap_Space_on_Debian_12
+https://www.scaler.com/topics/how-to-increase-swap-space-in-linux/
 
+
+swapon --show => Check Your System’s Swap Space
+fallocate -l 400m /swapfile => create a file with the desired size
+chmod 600 /swapfile => correct permissions for the swap file
+mkswap /swapfile => turn the file into swap space
+swapon /swapfile => activate the swap file by running
+nano /etc/fstab => To make sure the swap file is activated on system boot
+/swapfile swap swap defaults 0 0 => Add the following line to the end of the file (SIN BORRAR NADA)
+swapon --show => Now check the swap size.
+
+
+```
 ### Control de procesos
 
 > top
