@@ -101,7 +101,7 @@ SHELL = /bin/bash = echo "$SHELL"
 21 2 * * * rm /home/Servidor_RPA/oc/*
 22 2 * * * rm -rf /home/admin/.cache/*
 23 2 * * * find /tmp -type f -delete
-24 2 * * * /sbin/shutdown -r > /home/Servidor_RPA/InformeReseteo 2>&1
+24 2 * * * /sbin/shutdown -r (/sbin/shutdown -r now) > /home/Servidor_RPA/InformeReseteo 2>&1
 26 2 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 flush  > /home/Servidor_RPA/InformeLimpiezaLogs 2>&1
 25 2 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 start /home/Servidor_RPA/app.js -- --port 3000  > /home/Servidor_RPA/InformeReseteo 2>&1
 27 2 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 logs
