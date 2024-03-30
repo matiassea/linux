@@ -93,24 +93,27 @@ echo "$PWD"
 echo "$SHELL"
 
 Para configurar el archivo file Crontab
-PATH = echo "$PATH"
-PWD = echo "$PWD"
-SHELL = echo "$SHELL"
+PATH = /root/.nvm/versions/node/v12.22.12/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin = echo "$PATH"
+PWD = /home/Servidor_RPA = echo "$PWD"
+SHELL = /bin/bash = echo "$SHELL"
 
-30 3 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 stop 0
-30 3 * * * rm -rf /home/admin/.cache/*
-30 3 * * * find /tmp -type f -delete
-30 3 * * * rm oc/*
-30 3 * * * /sbin/shutdown -r
-30 3 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 start /home/Servidor_RPA/app.js -- --port 3000
-30 3 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 flush
-30 3 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 logs
+20 2 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 stop 0
+21 2 * * * rm /home/Servidor_RPA/oc/*
+22 2 * * * rm -rf /home/admin/.cache/*
+23 2 * * * find /tmp -type f -delete
+24 2 * * * /sbin/shutdown -r > /home/Servidor_RPA/InformeReseteo 2>&1
+26 2 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 flush  > /home/Servidor_RPA/InformeLimpiezaLogs 2>&1
+25 2 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 start /home/Servidor_RPA/app.js -- --port 3000  > /home/Servidor_RPA/InformeReseteo 2>&1
+27 2 * * * /root/.nvm/versions/node/v12.22.12/bin/pm2 logs
+28 2 * * * printenv > /home/Servidor_RPA/InformeEntorno
 
 Verificar
 Para verificar el funcionamiento del crontab se debe revisar: pm2 status, look y free -h
 
 Consideracion importante
 la libreria .env no se despliega a nivel de password en el archivo db/db.js. Por lo que se recomienda que el password sea directo en el archivo db.js
+Por lo que se recomienda colocar => require("dotenv").config({path:'/root/cancelacionOC/.env (ubicacion del archivo .env)'})
+
 
 Comandos que ayudan a configurar el Crontab
 which => para conocer el directorio raiz donde se encuentra el comando (pm2, SQL)
