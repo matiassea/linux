@@ -111,13 +111,14 @@ Verificar
 Para verificar el funcionamiento del crontab se debe revisar: pm2 status, look y free -h
 
 Consideracion importante
-la libreria .env no se despliega a nivel de password en el archivo db/db.js. Por lo que se recomienda que el password sea directo en el archivo db.js
-Por lo que se recomienda colocar => require("dotenv").config({path:'/root/cancelacionOC/.env (ubicacion del archivo .env)'})
+la libreria .env no se despliega a nivel de password en el archivo db/db.js y robots/worker.js .
+1) Por lo que se recomienda que el password sea directo en el archivo db.js
+2) Por lo que se recomienda colocar => require("dotenv").config({path:'/root/cancelacionOC/.env (ubicacion del archivo .env)'})
 
 
 Comandos que ayudan a configurar el Crontab
 which => para conocer el directorio raiz donde se encuentra el comando (pm2, SQL)
-timedatectl => Para saber la hora local. Se ejecuta a la LocalTime (esta con -2 horas)
+timedatectl => Para saber la hora local. Se ejecuta a la LocalTime (esta con -2 horas en verano)
 systemctl status cron => Debe decir "active", confirmando que Cron este activo.
 
 Para ejecutar comandos de SQL en el Crontab
