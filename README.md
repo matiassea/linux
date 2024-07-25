@@ -517,6 +517,16 @@ pip install -r requirements.txt
  
 > ejecutar "npm install" en la carpeta del servidor, aparecera la carpeta node_modules => npm i
 
+
+### Bajar repositorio de GitHub
+
+> git clone https://github.com/matiassea/finalizacionOC.git --branch V08032024
+
+> Username for 'https://github.com' : matiassea
+
+> Password for 'https://github.com' :
+
+
 ### Virtualenv en VPC
 
 > sudo apt install python3.11-venv
@@ -529,13 +539,13 @@ pip install -r requirements.txt
 
 > Para activar => source <virtualenv_name>/bin/activate => source env/bin/activate
 
-> Para instalar librerias segun archivo de configuracion => pip install -r requirements.txt 
-
-> Para desactivar => deactivate
-
 > nano Servidor_RPA/robots/requirements.txt (eliminar Pyinstaller del requirements.txt)
 
 > python3 -m pip install -r Servidor_RPA/robots/requirements.txt
+
+> Para instalar librerias segun archivo de configuracion => pip install -r requirements.txt 
+
+> Para desactivar => deactivate
 
 > pip install --upgrade pip virtualenv
 
@@ -589,17 +599,23 @@ https://levelup.gitconnected.com/how-to-install-gnupg-on-debian-11-2fcae38bc257
 
 ### MySQL
 
-> wget https://dev.mysql.com/get/mysql-apt-config_0.8.26-1_all.deb (el link obtenido desde "No thanks, just start my download."
+> wget https://dev.mysql.com/get/mysql-apt-config_0.8.32-1_all.deb (el link obtenido desde "No thanks, just start my download."
 
-> sudo dpkg -i mysql-apt-config_0.8.26-1_all.deb
+> sudo dpkg -i mysql-apt-config_0.8.32-1_all.deb
 
-> sudo apt update
+> sudo apt-get update
 
 > wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb
 
 > sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb -> debido a error de libssl1.1
 
-> sudo apt install mysql-server -y
+##### Verify and Edit Repository Configuration: => Ensure the repository configuration points to Debian Bullseye. Edit /etc/apt/sources.list.d/mysql.list if necessary.
+
+> sudo nano /etc/apt/sources.list.d/mysql.list
+> The content should be similar to: deb http://repo.mysql.com/apt/debian/ bullseye mysql-8.0
+
+
+> sudo apt-get install mysql-server
 
 > se agrega la contraseña (unt....83) y elegir contraseña recomendada
 
@@ -641,7 +657,7 @@ set emptyline
 
 > para ver mas configuraciones sudo nano /etc/nanorc 
 
-#### Funcionalidades
+#### Funcionalidades de Nano
 
 > Set the target by moving the cursor to the beginning of the text and pressing CTRL + 6.
 
@@ -663,20 +679,6 @@ set emptyline
 > sudo apt install python3-pip -y
 
 > sudo apt-get install python3-venv -y 
-
-#### Instalacion de virtualenv especifico 
-
-> python3 -m venv Servidor_RPA/robots/.venv
-
-> source Servidor_RPA/robots/.venv/bin/activate
-
-> python3 -m pip install virtualenv
-
-> nano Servidor_RPA/robots/requirements.txt (eliminar Pyinstaller del requirements.txt)
-
-> python3 -m pip install -r Servidor_RPA/robots/requirements.txt
-
-> pip install --upgrade pip virtualenv
 
 ### Firefox
 
@@ -757,6 +759,21 @@ alias lookcl="pm2 flush"
 alias stop="pm2 stop 0"
 
 alias occlean="rm /home/admin/FinalizacionCancelacion/oc/*"
+
+
+#### Instalacion de virtualenv especifico 
+
+> python3 -m venv Servidor_RPA/robots/.venv
+
+> source Servidor_RPA/robots/.venv/bin/activate
+
+> python3 -m pip install virtualenv
+
+> nano Servidor_RPA/robots/requirements.txt (eliminar Pyinstaller del requirements.txt)
+
+> python3 -m pip install -r Servidor_RPA/robots/requirements.txt
+
+> pip install --upgrade pip virtualenv
 
 ########################################################################################################################
 
